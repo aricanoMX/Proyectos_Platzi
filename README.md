@@ -1,7 +1,7 @@
 # Hola! :raised_hand:
 
 
-En este repositorio encontrarás algunos de los proyectos que he realizado en dentro de la plataforma de [Platzi.](https://platzi.com/):green_heart:
+En este repositorio encontrarás algunos de los proyectos que he realizado en dentro de la plataforma de [Platzi.](https://platzi.com/) :green_heart:
 
 
 
