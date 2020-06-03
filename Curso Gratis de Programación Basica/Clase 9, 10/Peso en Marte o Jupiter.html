@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Clase 9</title>
+</head>
+<body>
+    <h1>Tu peso en otro planeta</h1>
+    <!-- <p>En la tierra pesas distinto que en MARTE o JUPITER</p> -->
+    
+    <script>
+        var usuario = prompt("Cual es tu peso en la tierra?") /*Aca preguntamos al usuario cual es su peso mediante un prompt*/
+        var planeta = parseInt(prompt("Elige tu planeta:\n1 es Marte, \n2 es Jupiter"));
+        var g_tierra = 9.8;
+        var g_marte = 3.7;
+        var g_jupiter = 24.8;
+        var g_kripton = 1000000000;
+        var peso = parseInt(usuario); /*Acá estamos igualando y parseando (parseInt) el numero ingresado por el usuario por que de lo contrario seria un texto, despues utilizamos (parseFloat) para hacer que se muestren decimales dentro del resultado*/
+        var peso_final;
+        var nombre_planeta="";
+
+        if( planeta == 1)/*operador de comparacion que permite hacer la operacion*/
+        {
+            peso_final = peso * g_marte / g_tierra; /* Esto lo que hace es multiplicar tu peso por el peso en marte */
+            peso_final = parseInt(peso_final); /*Aqui lo que hicimos fue quitar los numero restantes con un punto flotante usando parseInt, despues utilizamos parseFloat para que igual se muestren los resultados con decimales*/
+            nombre_planeta = "Marte"
+        }
+        else if( planeta == 2) /*Este operador quiere decir que sino hizo lo anterior al colocar1, al presionar 2 haga esto*/
+        {
+            peso_final = peso * g_jupiter / g_tierra; /* Esto lo que hace es multiplicar tu peso por el peso en marte */
+            peso_final = parseInt(peso_final); /*Aqui lo que hicimos fue quitar los numero restantes con un punto flotante usando parseInt, despues utilizamos parseFloat para que igual se muestren los resultados con decimales*/
+            nombre_planeta = "Jupiter";
+        }
+        else
+        {
+            peso_final = g_kripton;
+            nombre_planeta = "Kripton";
+            document.write("<br>Para siguientes ocasiones trata de adelgazar y (☞ﾟヮﾟ)☞ colocar alguno de los planetas que se te solicito anteriormente<br><br>")
+        }
+        document.write("Tu peso en <strong>" + nombre_planeta + "</strong> seria de: <strong> "+ peso_final +" kilos (Terrestes) </strong>");/*Ejemplo perfecto de como podemos utilizar HTML dentro de JS, pero lo tenemos que definir dentro de comillas*/
+
+    </script>
+</body>
+</html>

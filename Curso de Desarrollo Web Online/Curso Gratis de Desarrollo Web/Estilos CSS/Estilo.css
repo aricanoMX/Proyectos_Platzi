@@ -1,0 +1,282 @@
+/*
+Reglas: Una regla es el conjunto de un selector, declaraciones, propiedades y valores. 
+Selectores: Como idenificamos un elemento de HTML(body, header, etc...)
+Declaraciones: Todo lo que hacemo dentro de ese selector.(todo lo que esta contenido dentro del selectore)
+Propiedades: Son las particularidades que podemos hacer con un determinado elemento. (Es una particularidad ejemplo: background)
+Valores: Son esas cosas que esperan recibir como variables las propiedades para actuar de forma correcta.(valor es aquella valiable capas de alterar una propiedad)
+
+comentario /* * /
+
+tipos de selectores
+(
+    1. Selector de etiqueta: header, section, article, nav, etc...
+    2. Selector descendente: es un elemento hijo de un elemento.
+    Ejemplo:
+    body header div nav ol li a
+    3. Selector de Clase o de ID:
+    los selectores de clase se pueden multiplicar varias veces mientras que el ID es unico dentro del website. Selector de Clase: sehace con un " . " Ejemplo " .Link "
+    Selectore de ID Ejemplo: "#Portafolio"
+)
+*/ 
+
+body{
+    margin: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Fjalla One', sans-serif;
+    font-weight: bold; /* Grosor fuente: de 100 a 900, normal es 400, bold es 600*/
+    font-style: normal /* Estilo de fuente, italica o cursiva, normal u oblicua */
+}
+h1{
+    font-size: 40px; /* Tamaño de fuente:  */
+    line-height: 1.25; /* Espaciado entre linea: el sistema entiende que esta escala es igual a 0 - 1 y 1.5 es 150% */
+    letter-spacing: -.2px;/* Sepración entre letras*/
+    text-transform: none; /* Tranformación de letras: De mayusculas a minusculas y viceversa*/
+    text-decoration: none; /* Decoración del texto */
+    color: white;
+    margin: 0;
+    /* margin: 100px 525px 70px 30px; top right bottom left */
+}
+h1 strong{
+    color: #026fff;
+}
+h2{
+    color: #026fff;
+    text-transform: uppercase;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: bold;
+    font-size: 25px;
+    margin-bottom: 40px;
+}
+.header{
+    background-color: #1b2127; /*Propiedad que sirve para definir un color de fondo*/
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    height: 70px;
+    align-items: center;
+}
+.header ol{
+    display: flex;
+    height: inherit;
+}
+.header ol li{
+    height: inherit;
+}
+.header a{
+    color: white;
+    text-decoration: none;
+    display: flex;
+    height: inherit;
+    align-items: center;
+    padding: 0 10px;
+}
+.menu{
+    height: inherit;
+}
+ol,ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+figure{
+    margin: 0;
+}
+
+.hero{
+    height: 300px; /* propiedad que sirve para definir el alto de una imagen*/
+    /* background-image: url('../Images/hero.jpg'); propiedad que sirve para insertar una imagen desde una dirección */
+    background-color: #1b2127;
+    /* background-size: 500px 300px; propiedad para dar tamaño a una imagen de fondo */
+    /* background-repeat: no-repeat; propiedad para que no se repita una imagen hacia ningun lado */
+    /* background-position-x: right; propiedad que sirve para definir donde se va a ubicar una imagen */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.hero-image{
+    object-fit: cover;
+}
+.portfolio{
+    background: #fafafa;
+    padding: 20px;
+}
+.project{
+    /* border-top: 10px solid green;/* Esta funcion define un borde y se le pueden editar distintas caracteristicas como el tamaño tipo y estilo
+    border-right: 10px solid red;
+    border-left: 10px solid rgb(136, 136, 136);
+    border-bottom: 10px solid rgb(22, 72, 209); */
+    /* border-color: red; /*Define el color que va a tener el borde todos los lados, pero solo funciona con una vez que definimos un border width y un estilo de borde 
+    border-width: 15px;
+    border-style: solid; */
+    /* para ser muy muy especifico en que borde queremos afectar podemos utilizar el border-top-color: o dependiendo de la direccion que querramos afectar. */
+    border: 1px solid gray;
+    border-radius: 10px; /* Este atributo redondea los borrdes */
+    /* border-top-left-radius: 50px; sirve para reondear solo una parte especifica de los bordes */
+    margin-bottom: 15px;
+    padding: 20px;
+    background: white;
+    box-sizing: border-box; /* Esta propiedad sirve para hacer que los elementos no crescan hacia los lados de la caja sino que crecen hacia adentro dejando el tamañp de origen sin cambios*/
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.project-details{
+    width: 500px;
+}
+.project-title{
+    font-size: 30px;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+.project-course{
+    margin: 10px 0;
+}
+.project-date{
+    margin: 10px 0;
+}
+.project-url{
+    margin: 10px 0;
+}
+.project-url small{
+    text-decoration: underline;
+}
+.project-imageContainer{
+    width: 500px;
+}
+.project strong{
+    font-family: 'Fjalla One', sans-serif;
+}
+.event-list-title{
+    margin-left: 10px;
+}
+.event-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.event{
+    margin: 10px;
+    width: 480px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #f4fbff;
+}
+.event img{
+    width: 480px;
+    height: 200px;
+    object-fit: cover;
+}
+.event-details{
+    margin: 20px 40px;
+    margin-top: -40px;
+    background-color: white;
+    position: relative;
+    padding: 20px;
+    text-align: center;
+}
+.event-description{
+    text-align: left;
+}
+.event-url{
+    color: gray;
+    border: 1px solid;
+    padding: 5px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+.contact{
+    background-color:#056fff;
+    color: white;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.form-email input{
+    border-color: gray;
+    border-style: solid;
+    border-radius: 5px;
+    padding: 10px 20px 10px 25px;
+    background-image: url('../Images/envelope.svg');
+    background-size: 15px 15px;
+    background-repeat: no-repeat;
+    background-position-x: 5px;
+    background-position-y: center;
+}
+.form-email button{
+    display: block;
+    background: transparent;
+    color: white;
+    padding: 10px 0;
+    border-radius: 5px;
+    width: 100px;
+    margin-top: 10px;
+}
+.form-email h3{
+    font-family: 'Source Sans Pro', sans-serif;
+}
+.social-link{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background-size: 50px 50px;
+    margin: 0 10px;
+}
+.social-link.twitter{
+    background-image: url('../Images/twitter.svg');
+}
+.social-link.facebook{
+    background-image: url('../Images/facebook.svg');
+}
+.social-link.github{
+    background-image: url('../Images/github.svg');
+}
+.social-link.instagram{
+    background-image: url('../Images/instagram.svg');
+}
+
+.footer{
+    color: white;
+    background-color: #1b2127;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.footer img{
+    vertical-align: middle; /*propiedad que permite alinear a los elementos de manera vertical*/
+}
+.footer a{
+    color: white;
+}
+.flexbox{
+    height: 300px;
+    border: 1px solid gray;
+    display: flex; /*Caja flexible: Flex coloca a todos los elementos presentes dentro el, uno despues de otro ocupando el ancho de la paguina*/
+    flex-direction: column; /*Este elemento permite modificar dirección en que se van a mostrar los elemento contenidos en flex,, horizontal o vertical, por defecto viene en "row"=fila.*/
+    flex-wrap: wrap;/*Propiedad que permite que los elementos no caigan una vez que ya no caben dentro del display, está viene por defecto en nowrap*/
+    justify-content: center; /*Esta propiedad sirve para posicionar los elementos del flex, está propiedad viene por defecto en flex-start*/
+    align-items: center; /*Propiedad que permite alinear los elementos de la flexbox de manera vertical simpre y cuando hayamos definido un espacion en el cual acomodarlo, viene por defecto en flex-start*/
+}
+.box{
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+    border: 1px solid gray;
+
+    flex-shrink: 0;/*Esta propiedad de los hijos de flex permite determinar la capacidad en que se va a encoger el elemento. pero se ponen lineales. y a desde 0 hasta 1.*/
+    /*align-self: flex-end ; Propieda que permite mover a cada  elemento a un lugar especifico, sin omitir la dirección antes dada por el padre*/
+}
+.container{
+    /* border: 1px solid gray; */
+    width: 1270px;
+    margin: 0 auto;
+    display: inherit;
+    align-items: inherit;
+    justify-content: inherit;
+    height: inherit;
+    flex-wrap: inherit;
+}

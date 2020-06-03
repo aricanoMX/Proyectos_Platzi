@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>First Doc</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Source+Sans+Pro:400,700&display=swap" rel="stylesheet"> <!-- Este tipo de fuente se obtiene mediante un enlace externo -->
+    <link rel="stylesheet" href="Estilos CSS/Estilo.css"> <!--Tiene el ultimo nivel de prioridad-->
+    <!--<style>
+        header{
+            background: black;
+        }
+    </style> Este tag es el segundo estilo que podemos agregar estilos, y selectores, y va despues de un estilo de etiqueta-->
+</head>
+<body>
+    <!-- <class class="flexbox"> 
+        <div class="box" style="align-self: flex-end"></div>
+        <div class="box" style="align-self: flex-start"></div>
+        <div class="box"></div>
+    </class> -->
+    <header class="header"><!-- style=" color:white; background:black; "El atributo style es un estilo en linea, este no solo va a recibir un valor, sino que va a recibir multiples valores,  -->
+        <div class="container">
+            <figure class="logo">
+                <img src="images/logo.png" height="50" alt="logo de hattp://leonidadsesteban.com">
+            </figure>
+            <nav class="menu">
+                <ol>
+                    <li><a class="link" href="#Portafolio">Portafolio</a></li> <!-- El # es el que identifica que es un link interno en el que estamos navegando y por ejemplo si quisieramos usar un enlace externo lo que tenemos que hacer es colocar un "/" y para hacerlo relativo le ponemos "./"-->
+                    <li><a class="link" href="#Eventos">Experiencia</a></li>
+                    <li><a class="link" href="#Contacto">Trabajemos juntos</a></li>
+                </ol>
+            </nav>
+        </div>
+    </header>
+    <section class="hero">
+        <div class="container">
+            <h1>
+                Hola! Soy <strong>Andrés Ricaño César</strong><br> Un <strong>desarrollador jr</strong> en <strong>Javascript</strong>
+            </h1>
+            <img  class=hero-image src="Images/hero.jpg" width="500" height="300" alt="Imagen principal del sitio">
+        </div>
+    </section>
+    <section id="Portafolio" class="portfolio">
+        <div class="container">
+            <h2>Portafolio (Proyectos Destacados)</h2>
+            <article class="project">
+                <div class="project-details">
+                    <h3 class="project-title">Platzi Video</h3>
+                    <h6 class="project-course">React Native& React</h6>
+                    <p class="project-date"><small> <strong> Fecha= 31/05/2019 </strong>  </small> </p>
+                    <p class="project-url"><small> <strong> Puedes Verlo en: </strong> www.platzi.com/native </small> </p>
+                    <p class="project-description"> Platzi video fue el resultado de 3 meses de trabajo para crear la mejor app para enseñar el funcionamiento de react y react native. Desde crear una vista, hasta patrones avanzados de navegación, esté proyecto ha sido el ejemplo de futuros creadores de aplicaciones multiplataforma.
+                    </p>
+                </div>
+                <figure class="project-imageContainer">
+                    <img class="project-image" src="images/platzi-video-react-native.png" alt="proyecto del curso de react native" width="500">
+                </figure>
+            </article>
+            <article class="project">
+                <div class="project-details">
+                    <h3 class="project-title">Platzi Video</h3>
+                    <h6 class="project-course">React Native& React</h6>
+                    <p class="project-date"><small> <strong> Fecha= 31/05/2019 </strong>  </small> </p>
+                    <p class="project-url"><small> <strong> Puedes Verlo en: </strong> www.platzi.com/native </small> </p>
+                    <p class="project-description"> Platzi video fue el resultado de 3 meses de trabajo para crear la mejor app para enseñar el funcionamiento de react y react native. Desde crear una vista, hasta patrones avanzados de navegación, esté proyecto ha sido el ejemplo de futuros creadores de aplicaciones multiplataforma.
+                    </p>
+                </div>
+                <figure class="project-imageContainer">
+                   <img class="project-image" src="images/platzi-video-react-native.png" alt="proyecto del curso de react native" width="500">
+                </figure>
+            </article>
+        </div>
+    </section>
+    <div class="container">
+        <h2 class="event-list-title">Más sobre mi experiencia</h2>
+    </div>
+    <section id="Eventos" class="event-list">
+        <div class="container">
+            <article class="event">
+                <figure class="event-imageContainer">
+                    <img class="event-image" src="images/platzi-conf.jpg" width="500" height="400" alt="">
+                </figure>
+                <div class="event-details">
+                    <h3 class="event-title">PlatziConf México 2018</h3>
+                    <p class="event-description" >El evento más chevere que tiene platzi</p>
+                    <a class="event-url" href="https://www.youtube.com/watch?v=wcE-1HknI1E" target="_blank">Ver Platicas</a> <!--Al colocar el atributo target="_blank" lo que estamos diciendo es que habla en enlace en una pestaña aparte, para que nos mantenga en nuestro sitio web-->
+                </div>
+            </article>
+            <article class="event">
+                <figure class="event-imageContainer">
+                    <img class="event-image" src="images/platzi-conf.jpg" width="500" height="400" alt="">
+                </figure>
+                <div class="event-details">
+                    <h3 class="event-title">PlatziConf México 2018</h3>
+                    <p class="event-description" >El evento más chevere que tiene platzi</p>
+                    <a class="event-url" href="https://www.youtube.com/watch?v=wcE-1HknI1E" target="_blank">Ver Platicas</a> <!--Al colocar el atributo target="_blank" lo que estamos diciendo es que habla en enlace en una pestaña aparte, para que nos mantenga en nuestro sitio web-->
+                </div>
+            </article>
+            <article class="event">
+                <figure class="event-imageContainer">
+                    <img class="event-image" src="images/platzi-conf.jpg" width="500" height="400" alt="">
+                </figure>
+                <div class="event-details">
+                    <h3 class="event-title">PlatziConf México 2018</h3>
+                    <p class="event-description" >El evento más chevere que tiene platzi</p>
+                    <a class="event-url" href="https://www.youtube.com/watch?v=wcE-1HknI1E" target="_blank">Ver Platicas</a> <!--Al colocar el atributo target="_blank" lo que estamos diciendo es que habla en enlace en una pestaña aparte, para que nos mantenga en nuestro sitio web-->
+                </div>
+            </article>
+            <article class="event">
+                <figure class="event-imageContainer">
+                    <img class="event-image" src="images/platzi-conf.jpg" width="500" height="400" alt="">
+                </figure>
+                <div class="event-details">
+                    <h3 class="event-title">PlatziConf México 2018</h3>
+                    <p class="event-description" >El evento más chevere que tiene platzi</p>
+                    <a class="event-url" href="https://www.youtube.com/watch?v=wcE-1HknI1E" target="_blank">Ver Platicas</a> <!--Al colocar el atributo target="_blank" lo que estamos diciendo es que habla en enlace en una pestaña aparte, para que nos mantenga en nuestro sitio web-->
+                </div>
+            </article>
+        </div>
+    </section>
+    <section id="Contacto" class="contact">
+        <div class="container">
+            <form class="form-email" action="/suscripcion/"> <!-- en backend el action es importante por que a donde se va a enviar esa información -->
+                <h3>¿Creamos algo juntos?</h3>
+                <label form="email"></label><!--label son referenciaas a lo que se hace con el placeholder-->
+                <input type="text" placeholder="Déjame tu email" value="@gmail.com" id="email"> <!-- Placeholder sirve para dejar un mensaje de guia, y value es para poner un valor por defecto, mientras que el elemento email hace un focus o selecciona al elemento placeholder-->
+                <!-- <input type="submit" value="Enviar"> Tipo de input que va a enviar la información al formulario -->
+                <button>Enviar</button>
+            </form>
+            <div class="social">
+                <a href="https://twitter.com/leonidasesteban" class="social-link twitter"></a>
+                <a href="hhtps://www.facebook.com/leonidas.esteban" class="social-link facebook"></a>
+                <a href="https://www.github.com/leonidasesteban" class="social-link github"></a>
+                <a href="https://www.instagram.com/leonidadsesteban" class="social-link instagram"></a>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div>
+                <p>Curso de Desarrollo Web Online 2019 <img src="./Images/platzi.png" alt="Platzi" width="80"> </p>
+            </div>
+            <div>
+                <p>Designed with <\3 by a   <a href="https://twitter.com/thespianartist">@thespianartist</a> </p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

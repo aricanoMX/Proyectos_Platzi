@@ -1,0 +1,13 @@
+-------------------- Cómo funciona .zip: Árboles binarios --------------------
+
+-------------------- Metadatos, cabeceras y extensiones de archivos --------------------
+
+Todo sistema operativo comienza a leer las cabeceras hasta encontrar un patron que reconoce.
+
+-------------------- Cómo funciona el formato JPG --------------------
+
+-------------------- Videos, contenedores, codecs y protocolos --------------------
+
+
+0000 0000
+0001 1011

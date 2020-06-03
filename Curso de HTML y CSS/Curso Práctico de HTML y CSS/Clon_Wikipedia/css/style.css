@@ -1,0 +1,131 @@
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 98vh;
+  min-width: 98vw;
+}
+main .container-logo {
+  margin: 75px auto 25px auto;
+  text-align: center;
+}
+
+main .container-logo-box {
+  margin-bottom: 5px;
+}
+
+main .container-logo span {
+  font-size: 16px;
+  font-weight: 400;
+}
+/* _________________________________________________ */
+
+main .container-text {
+  margin: 0px auto;
+  width: 550px;
+  text-align: center;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Lato,
+    Helvetica, Arial, sans-serif;
+}
+
+main .container-text-box {
+  display: flex;
+  justify-content: space-between;
+  height: 45px;
+  margin-bottom: 15px;
+}
+main .box-container1-left {
+  margin-left: 60px;
+  justify-content: space-between;
+  height: 45px;
+}
+
+main .box-container1-right {
+  margin-right: 60px;
+  justify-content: space-between;
+  height: 45px;
+}
+
+main .box-container2-left {
+  margin-left: 10px;
+  justify-content: space-between;
+  height: 45px;
+}
+main .box-container2-right {
+  margin-right: 10px;
+  justify-content: space-between;
+  height: 45px;
+}
+main .box-container3-left {
+  margin-left: -10px;
+  justify-content: space-between;
+  height: 45px;
+}
+main .box-container3-right {
+  margin-right: -10px;
+  justify-content: space-between;
+  height: 45px;
+}
+
+main .container-text .container-top {
+  color: rgb(51, 102, 204);
+  font-size: 16px;
+  font-weight: 700;
+  width: 160px;
+  margin-bottom: 5px;
+}
+
+main .container-text .container-bottom {
+  color: rgb(84, 89, 93);
+  font-size: 12px;
+  width: 160px;
+}
+/* _________________________________________________ */
+
+main .container-image {
+  margin: 0 auto;
+  position: relative;
+  margin-top: -260px;
+  width: 200px;
+}
+
+main .container-image img {
+  width: inherit;
+}
+
+/* _________________________________________________ */
+
+main .container-input {
+  margin: 100px auto 0 auto;
+  width: 540px;
+  height: 60px;
+}
+main .container-input input {
+  border: 1px solid rgb(162, 169, 177);
+  outline: none;
+  width: 395px;
+  height: 40px;
+}
+main .container-input input:hover {
+  border: 1px solid #333;
+}
+main .container-input-box {
+  width: 540px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main .container-input .search-icon {
+  width: 50px;
+  height: 44px;
+  background-color: rgb(51, 102, 204);
+  background-image: url("https://png2.cleanpng.com/sh/7759ef1d7b52b7945d48696d443ae02c/L0KzQYm3WMI5N5Z4f5H0aYP2gLBuTgBzd5V6eAY2ZHX2ebj1TfxqdpYyftH3dD24com8WMk1PJI4TKhuND66RYe3VMQ1OGI6S6c9N0izSIW9Vsg5NqFzf3==/kisspng-product-design-line-font-5b858944a346e4.7560444015354780846688.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 50px;
+  -moz-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  filter: FlipH;
+  -ms-filter: "FlipH";
+}

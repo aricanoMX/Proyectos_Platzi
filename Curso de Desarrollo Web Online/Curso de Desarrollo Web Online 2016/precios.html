@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Allerta&family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/invie.css" />
+    <title>Invie</title>
+  </head>
+  <body>
+    <div class="background">
+      <header id="headerInvi" class="header container">
+        <!-- header -->
+        <figure class="logotipo">
+          <!-- logotipo  -->
+          <a href="href" ="index.html">
+            <img
+              href="index.html"
+              src="images/invie.png"
+              alt="Invie_Logo"
+              width="186"
+              height="60"
+            />
+          </a>
+        </figure>
+        <nav class="menu">
+          <!-- menu -->
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#guitars">Guitarras</a></li>
+            <li><a href="precios.html">Precios</a></li>
+          </ul>
+        </nav>
+      </header>
+      <!-- FIN DE HEADER -->
+    </div>
+    <br />
+    <br />
+    <!-- TABLA -->
+    <section class="tabla">
+      <div class="container">
+        <table>
+          <thead>
+            <tr>
+              <th>Modelo</th>
+              <th>Precio</th>
+              <th>Descripción</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Invie Acustica</td>
+              <td>$ * * * *</td>
+              <td>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Quisquam, quia tenetur quae perferendis libero qui, facilis
+                <br />
+                eius, rerum quis cumque non earum rem repellendus saepe?
+                Praesentium eaque officiis voluptatibus enim?
+              </td>
+            </tr>
+            <tr>
+              <td>invie Classic</td>
+              <td>$ * * * *</td>
+              <td>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Provident molestiae optio tempora culpa pariatur quia velit
+                <br />
+                ullam maiores nulla omnis cumque incidunt corrupti vitae labore,
+                nihil autem distinctio vel quidem.
+              </td>
+            </tr>
+            <tr>
+              <td>Invie Custom</td>
+              <td>$ * * * *</td>
+              <td>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Aspernatur quae illo voluptatum veritatis harum a officia dolor
+                <br />
+                deleniti. Odio corrupti consequuntur porro in debitis
+                repellendus explicabo cupiditate tenetur dignissimos dolore!
+              </td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <th></th>
+              <th></th>
+              <th class="mensajeSecreto">
+                Las mejore guitarras invisibles del mundo
+              </th>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+    </section>
+    <br />
+    <br />
+    <footer class="footer">
+      <div class="container">
+        <div class="contacto">
+          <img src="images/invie-white.png" alt="Logotipo Invie blanco" />
+          <a href="tel:+527712666779"
+            ><strong>Telefono</strong><span>7712666779</span></a
+          >
+          <a href="mailto:tekne295@gmail.com"
+            ><strong>E-mail</strong><span>contacto@website.com</span></a
+          >
+        </div>
+        <form class="formulario">
+          <div class="informacion">
+            <h3 class="cabeceraContacto">Contacto</h3>
+            <hr />
+            <label for="nombre">Nombre</label>
+            <input type="text " required id="nombre" name="nombre" />
+            <label for="e-mail">E-mail</label>
+            <input type="email " required id="e-mail" name="e-mail" />
+            <div class="genero">
+              <label for="rhombre">
+                <label for="rMujer">
+                  <input
+                    type="radio"
+                    name="genero"
+                    id="rMujer"
+                    checked
+                    value="mujer"
+                  />
+                  Mujer
+                </label>
+                <input type="radio" name="genero" id="rHombre" value="hombre" />
+                Hombre
+              </label>
+            </div>
+            <div class="asunto">
+              <label for="cCotizacion">
+                <input
+                  type="checkbox"
+                  name="asunto"
+                  id="cCotizacion"
+                  value="cotizacion"
+                  checked
+                />
+                Cotización
+              </label>
+              <label for="cComentarios">
+                <input
+                  type="checkbox"
+                  name="asunto"
+                  id="cComentarios"
+                  value="comentario"
+                />
+                Comentario
+              </label>
+              <label for="cReclamos">
+                <input
+                  type="checkbox"
+                  name="asunto"
+                  id="cReclamos"
+                  value="reclamo"
+                />
+                Reclamo
+              </label>
+              <label for="cOtros">
+                <input
+                  type="checkbox"
+                  name="asunto"
+                  id="cOtros"
+                  value="otros"
+                />
+                Otros
+              </label>
+            </div>
+          </div>
+          <div class="queja">
+            <label for="taComentario">
+              Comentario
+            </label>
+            <textarea
+              name="mensaje"
+              id="taComentario"
+              placeholder="Comentario"
+              cols="50"
+              rows="10"
+            ></textarea>
+            <input class="button" type="submit" value="Enviar" />
+          </div>
+        </form>
+      </div>
+    </footer>
+  </body>
+</html>

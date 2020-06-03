@@ -1,0 +1,26 @@
+Qué es fronten y que es backend?
+
+Frontend 
+    Parte del software que interactua con el usuario.
+
+    Lenguajes
+        estos son los lenguajes que interactuan con el usuario
+
+        HTML: es la estructura de la pag web.
+        CSS: da estilos al documento HTML.
+        JS: lleva toda la parte funcional de la web.
+
+        Compilador: facilita la creación de paginas web.
+
+Backend
+    Es la parte que procesa toda la entrada que viene desde el front-end, por ejemplo la compra de una mochila.Tambien hace conexiones entre bases de datos o nuestro software, 
+    
+    concepto CRUD
+
+    Create: 
+    Read:
+    Update:
+    Delete:
+
+Que es HTML:
+    Es un markup languaje HyperText Markup Languaje(HTML) sistema de marcas de hipertexto

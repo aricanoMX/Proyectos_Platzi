@@ -1,0 +1,26 @@
+.button {
+  background-color: #ffb400;
+  padding: 20px;
+  border-bottom: 5px solid #e49100;
+  border-radius: 5px;
+  width: 100%;
+  margin: 10px;
+  transition: all 200ms linear;
+}
+.button:hover {
+  background-color: #e49100;
+  cursor: pointer;
+  border-top: 6px solid #ffb400;
+  border-bottom: 0 none;
+}
+
+.boto:last-of-type {
+  margin: 0;
+}
+
+.button a {
+  color: #ffffff;
+  font-size: 400;
+  text-decoration: none;
+  text-transform: uppercase;
+}

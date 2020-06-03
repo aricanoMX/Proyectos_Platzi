@@ -1,0 +1,51 @@
+-------------------- Diferencias entre Windows, Linux, Mac iOS y Android --------------------
+    Windows= Sistema Cerrado
+    Linux = Open Source, Libre
+    iOS = Mac OS
+
+Qué es software libre y que es Open Source?
+    Libre implica que cualquier persona puede reescribir y modificar el sistema operativo.
+        
+    Open Source es codigo abierto que se puede redistribuir, pero no garantiza la libertad del codigo.
+
+    BSD Licence determina cómo se puede distribuir el código.
+    GNU / GPL Las personas que redistribuyen el código tienen que aportar.
+    Kernel es el núcleo del Sistema Operativo y corre en el anillo 0.
+    UNIX el primer sistema operativo.
+
+    XEROX Star - Xerox creo la computación movil, mouse, sistemas operativo que creó las ventanas.
+
+-------------------- Permisos, niveles de procesos y provolegios de ejecución --------------------
+En sistemas UNIX se pueden artibuir permisos a distintos grupos:
+
+Permiso:
+    en sistemas unix con Chmod se pueden modificar los permisos a los que se puede tener acceso.
+    read(r): permiso para leer archivos.
+    write(w): permiso de escritura, ejemplo  r w x, r w -, r - -
+    Execute(X): permiso para ejecutar.
+
+el comando sudo eleva los permisos que tiene a nivel administrador.
+
+-------------------- Fundamentos de sistemas operativos moviles --------------------
+
+En el mundo de Android se pueden distribuir aplicaciones desde 2 formas o Stores:
+
+    Google play store
+    Amazon Fire Store
+
+En el mundo alpple solo existe una forma de distrubuir tus aplicaiones y es mediante la Apple store.
+    
+    cidia: era una distribución antigua para los iphones que permitia instalar apps sin la necesidad de recurrir a la app store
+
+
+chocolati: Es lo mismo que cidia pero para el sistema operativo de winddows.
+
+    Apt get, jum son comandos en distribución linux que permiten instalar paquetedes ospiciados por el mismo linux
+    
+    *nix cualquier aplicacion de android puede internamente guardar datos.
+
+    En Android simplemente se utiliza Java como lenguaje de programación puro y furo, con una extención llamada Dalvik.
+
+    Forma de crear aplicacione de forma nativa a Android Studio.
+
+-------------------- Sistemas opertativos embebidos e Internet of Things --------------------

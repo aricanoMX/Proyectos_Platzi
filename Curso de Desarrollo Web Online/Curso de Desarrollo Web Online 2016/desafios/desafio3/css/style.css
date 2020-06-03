@@ -1,0 +1,44 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+.box {
+  min-height: 100vh;
+  min-width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  background-image: url(https://images.pexels.com/photos/699122/pexels-photo-699122.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  transition: background 2s;
+}
+.box:hover {
+  transition: 1s;
+  border: 10px solid white;
+  background-size: 135%;
+}
+.box:hover .container {
+  transform: translateY(0);
+  transition: 2s;
+  /* transform: skew(30deg); */
+  transform: 1s, rotate(180deg);
+}
+
+.container {
+  transform: translateY(100vh);
+  margin: 0;
+  padding: 0;
+  height: 400px;
+  width: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(96, 78, 66, 0.5);
+}
+.container p {
+  color: white;
+  text-align: center;
+}
