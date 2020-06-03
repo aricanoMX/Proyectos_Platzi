@@ -1,5 +1,6 @@
 # Link de Visualización
-#### Este proyecto consta de hacer un pequeño clon del index de la pagina de Wikipedia.
+#### Detalles
+* Este proyecto consta de hacer un pequeño clon del index de la pagina de Wikipedia.
 
 ### Instrucciones:
 * _Unicamente presiona el link que te dejo abajo_
