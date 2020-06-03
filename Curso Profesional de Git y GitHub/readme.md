@@ -1,4 +1,4 @@
-Curso de  git y github 2014 y 2016
+# Curso de git y github 2014 y 2016
 
 $ cd 				                    Sirve para movernos entre carpetas
 
