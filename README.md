@@ -20,5 +20,4 @@ PD: Nunca pares de Aprender :mortar_board:
 
 ###### Instrucciones:
 * Abajo te dejo link de las carpetas contenidas dentro del repositorio.
-
-  * Únicamente haz clic en el link que dejo abajo.
+* Únicamente haz clic en el link que dejo abajo.
