@@ -40,33 +40,33 @@ $ **git branch -a ** _Sirve para ver incluso las ramas ocultas _
 
 \$ **git merge** _Sirve para hacer fusión entre ramas_
 
-> **IMPORTANTE**
-> SIEMPRE QUE VAYAMOS A HACER UN MERGE MANUAL
-> VA A APARECER UNA VENTANA
+>     			**IMPORTANTE**
+>     			SIEMPRE QUE VAYAMOS A HACER UN MERGE MANUAL
+>     			VA A APARECER UNA VENTANA
 >
->     		**TRANQUILO**
->     		PRESIONAMOS LA LETRA 'O'
->     		TENEMOS QUE COLOCAR UN MENSAJE DEL COMMIT (OBLIGATORIO)
->     		AL TERMINAR PRESIONAMOS ":"
->     		INMEDIATAMENTE PONEMOS "X"
+>     			**TRANQUILO**
+>     			PRESIONAMOS LA LETRA 'O'
+>     			TENEMOS QUE COLOCAR UN MENSAJE DEL COMMIT (OBLIGATORIO)
+>     			AL TERMINAR PRESIONAMOS ":"
+>     			INMEDIATAMENTE PONEMOS "X"
 >
->     		EJEMPLO: **":x"**
->     		Y ENTER
+>     			EJEMPLO: **":x"**
+>     			Y ENTER
 
 \$ **git merge (origin/master)** _Esto lo que hace es fusionar el branch que sirve de vigia y nuestra branch local_
 
 \$ **git fetch ** _Sirve para sincronizar los repositorios de nuestro servidor a nuestro repositorio local_
 
-> **IMPORTANTE**
-> SIMPRE QUE SE AGREGUEN DATOS A LOS SERVIDORES SE TIENEN QUE SINCRONIZAR CON LOS ARCHIVOS LOCALES
-> SIEMPRE.....
+>     			**IMPORTANTE**
+>     			SIMPRE QUE SE AGREGUEN DATOS A LOS SERVIDORES SE TIENEN QUE SINCRONIZAR CON LOS ARCHIVOS LOCALES
+>     			SIEMPRE.....
 
 \$ **git fetch origin** _Sirve para mandar nuestros cambios al servidor espejo llamado 'origin'_
 
-> **IMPORTANTE**
-> Esta branch siempre esta mirando lo que se modifica en nuestro git
+>     			**IMPORTANTE**
+>     			Esta branch siempre esta mirando lo que se modifica en nuestro git
 
 \$ **git push (rama/branch)** _Sirve para mandar los cambios a producción/al repositorio master del servidor_
 
-> **IMPORTANTE**
-> Sirve para subir archivos a servidor
+>     			**IMPORTANTE**
+>     			Sirve para subir archivos a servidor
