@@ -1,0 +1,142 @@
+---------------- Fundamentos de Ingenieria de Software ----------------
+
+API : Aplication Program Interface, sirve paara comunicarse entre programas.
+AJAX: Asincronus JavaScript and XML.
+JSON: JavaScript Object Notation
+
+API REST: tecnica para enviar datos al servidor
+HTTP: Hyper Text Transport Protocol funciona por el (puerto 80)
+HTTPS: funcióna a traves del (puerto 443)
+
+.... Capa de Internet
+
+Protocolo SSH: Secure Sheld funciona a traves del puerto 22
+HTTPS: Protocolo cifrado, https seguro.
+
+Dominio: Nombre por el cual encontramos al servidor. Dirección unica de Internet
+
+DNS: Domain Name Server
+
+Switch (Solo distribuye la red de forma local) enrutan los datos y los van distribuyendo 
+
+Router (Inteligente) el router identifica las mac para que no se equivoquen,  
+ahora existen routers wifi, casi siempre podemos remplazar el switch con un router wifi,
+
+ISP: Internet Service Provider 
+
+LAN: Local Area Network (Red de area local)
+
+LocalHost: 127.0.0.1 
+
+---------------- Introducción a redesy protocolos e Internet ----------------
+
+como conectar un computador a una red local: Podemos conectarlos directamente por el cable de red mediante el pueto ETHERNET
+
+Un router wifi necesita saber:  Nombre de red 
+                                Passwords
+                                Ip list (numero que identifica a cada dispositivo)
+                                MAC Address
+
+Modem (del ISP Interntet Service Provider): ADSL, Cobre, 4G/LTE, Fibra Optica
+
+IP: Internet Protocol
+
+---------------- Puertos y Protocolos de Internet ----------------
+
+IP: 127.0.0.1: LocalHost Nuestro propio computador (dispositivo).
+
+IP LAN (Local Area Network, donde andan todos nuestros dispositivos): 192.168.100.1
+
+Despus se crearon las sub-redes que lo que hacen es identificar a los dispositivos en donde se encuentran.
+
+PUERTOS BLOQUEADOS DEL 1 AL 1024 son puertos para ejecutar a traves del administrador.
+
+Protocolos más populares 
+
+HTTP: 80 se utiliza para conectarse a la web.
+HTTPS: 443 se utiliza para conectarse a la web de una manera más segura.
+BitTorrent: 6881 - 6889 se utiliza para descarga de archivos.
+HHS (Secure Shell): 22 se utiliza para conectarse a otro computador de manera segura.
+
+
+---------------- Qué es una dirección IP y el protocolo de Internet ----------------
+            192.168.10.50
+( 11000000.10101000.00001010.00110010 )
+
+Mascara de Red (Subnet Mask): 
+            255.255.0.0
+( 11111111.11111111.00000000.00000000 )
+ |_________________| <--- TODOS ESTOS NUMEROS SON ESTATICOS Y RESERVADOS PARA DIRECCIONES PRIVADAS.
+ y podemos modificarlos o cerrarlo a ( 255.255.255. algo ) para reducir la red
+
+GatewayIP ( Puerta de enlace ) (Ejemplo: 19.168.10.1): siempre van a ser la conexión numero 1.
+El gateway es el encargado de emitir un paquete de conexion y esto lo que hace es identificar la ip del gateway (es la ip del router principal que se conecta al resto de los dispositivos y afuera) 
+
+NAT: Network Address Trasl8ation: protocolo encargado de traducir direcciones de internet a direcciones de area local.
+
+---------------- Cables sub marinos, antenas y satelites en internet ----------------
+
+N.A.P (Network Access Point): eran lugares donde los paises cableaban conexiones con otros paises.
+I.X.P (Internet Exchange Points): lugares donde se aglomeran la fibra opticay conexiones de todo el mundo.
+
+Cables Submarino (Cable ARCOS): Cable anillo que nos conecta con todo el caribe
+
+ISP se conecta a los cables submarinos  
+DNS: (Domain Name Server)
+
+---------------- Qué es un dominio, DNS o Domain Name Syestem ----------------
+
+los DNS pueden tener sub dominios y este puede tener una Ip diferente, tambien pueden guardan los servidores de envio de emails.
+
+---------------- Cómo los ISP hacen Quality of Service o QoS ----------------
+
+Ultimo tramo del cable submarino, se tiende a llamar ULTIMA MILLA
+
+
+M.A.N: Metropolitan Area Networks.
+
+Los Provedores de Internet hacen algo que ellos llaman QoS - Quality of Service (Calidad de Servicio)
+Tambien llamado Network Shaping o Throttling (Acelerar y Des acelerar la conexión en la ultima Milla)
+
+Para hacer que la conexión sea mas corta y cueste menos los ISP crearon el concepto llamado CDN - Content Delivery Networks
+
+---------------- Cómo funciona la velocidad a internet ----------------
+
+Los ISP nos venden Mega BITS que es lo contratado entre 8, 30 Mb/ 8: 3.75 MB posibles 
+
+PING: Tiempo que tarda la conexión en establecerse. (trabaja en milisegundos)
+
+En fibra optica, los datos viajan a 300 km/s, por eso es el ping, entre más lejando este el dominio más ping se tendra.
+
+---------------- Qué es el modelo Cliente/Serviddor ----------------
+
+SI QUIERO DEDICARME A LA PROGRAMACIÓN WEB TENGO QUE BASARME EN EL STACK LAMP (LINUX, APACHE, MYSQL, PHP)
+
+---------------- JAMAS DE LOS JAMASES SE ACCEDE A LA BASE DE DATOS DESDE EL NAVEGADOR...
+
+ El backend existe solo para permitir los datos que el navegador solicita, sin la posibilidad de mostrarlos todos
+
+ Existen muchos metodos para conectarse desde el html y JavaScript hasta el backend.
+
+    GET 
+    POST : este modelo enmascara los datos que ingresamos desde el front hasta el back, envia datos a traves de formularios, manda los datos a traves de los headers.
+    AJAX: esté cambia los datos en tiempo real, 
+    SOCKETS o Web Sockets 
+
+---------------- Cómo funciona realmente un sitio web ----------------
+
+# 1er paso es:
+    - hacer una petición al sistema operativo para ver sí este tiene alojado la dirección solicitada
+# 2do paso es:  
+    - Posterior se hace un HTTP Request mediante el metodo GET (dar o dame)
+        /Fundamentos (Tipo de protocolo) con el Host: www.dominio.com, User-Agent: ejemplo Firefox 369.0.2.6
+        Estos datos son empaquetados y se los envia a la IP del servidor, a traves del puerto 80.
+# 3er paso es:
+    - Recibir y aceptar la petición a traves de un mensaje ya sea 404, 500 (a esto se le llama HTTP Response)
+
+# 4to paso:
+    - Acá se hacen los assets request y se vuelve al paso #1.
+
+Qué son las Cookies? 
+    - Son datos guardados, muy similar a un DNS, Nombre y valor, variables.
+    - Estás no solo van en el request o en el response, estas van en ambos lados, las cookies se pegana al request.

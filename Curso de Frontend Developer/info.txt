@@ -1,0 +1,52 @@
+DOM = Document Objetct Model
+
+
+CSSOM = Represetnacion de objetos igual que el DOM pero para documentos CSS 
+
+
+RENDER TREE = Este es un arbol de DOM y de CSSOM juntos para poder renderizar todo el codigo junto
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+/* 
+    Para el navegador estas etiquetas es completamente desconocido, debido a esos transforma todo en bytes
+    charactes tranforma esos bytes
+    posteriormente de characters a tokens
+    de los tokens hace la tranformación a NODOS
+
+    estos nodos son perfectamente entendidos por el navegador estos tambien son llados objetos
+
+    y posteriormente todo pasa a ser llamado DOM
+
+    Los procesos van a ser 5
+    1)  Procesa los datos del html y contruye el DOM
+    2)  Procesa el CSS y contruye el CSSOM
+    3)  DOM + CSSOM = RENDER TREE
+    4)  Ejecuta el diseño en el render tree
+    5)  Pinta el nodo en la pantalla
+*/
+
+       atributo    Valor
+          |          |
+    <h1 class>    Saludo    </h1>
+    
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    

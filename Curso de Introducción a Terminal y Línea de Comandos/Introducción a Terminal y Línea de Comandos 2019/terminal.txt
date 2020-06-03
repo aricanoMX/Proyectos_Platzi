@@ -1,0 +1,286 @@
+_________________________________________________
+comandos
+_________________________________________________
+
+  - ls       listar
+  
+  - ls (-l)  bandera..   listar hacia abajo
+
+        PD: las banderas pueden ir juntas o serparadas 
+
+        - ls -lhsa
+
+        o
+
+        - ls -l -h -s -a
+
+  - ls lh     (lejible o comprendiblea para humanos)
+  - ls lha    (lista todo, de manera comprendiblea para humanos y muestra todos los archivos)
+
+
+  - pwd       (en que dirección me encuentro)
+
+  - tree      (nos muestra de manera visual los directorios en donde nos encontramos)
+
+  - cd        (change directory) así te lleva a home
+  - cd .      (es directorio o UNO MISMO)
+  - cd ..     (directorio padre)
+
+cuando se haga un ejecutable r
+
+_________________________________________________
+Manipulación y modificación del árbol de directorios
+_________________________________________________
+
+- mkdir       (crea un directorio)
+- touch       (crea un archivo. Si no existe el archivo lo va a crear, y si existe le cambia la fecha de modificación)
+- mv          (mueve un archivo, te ayuda a modificarlo)
+ejemplo:
+- mv pueba.md test    (ahora el archivo se llamara test)
+
+- rm          (elimina archivos o links, no funciona para eliminar un directorio, para esto necesitas un poco más)
+  - rm -rf    (elimina un directorio recursivamente)
+
+- man:        (es el manual de la terminal, puedes utilizarlo cuando tu quieras para entender qué hace un comando y sus banderas
+                Con espacio pasas una página, - con b te regresas una página y con q sales del manual.)
+- cp          (copia un archivo a otros directorios)
+- pushd       (te permiten navegar entre dos directorios fácilmente.)
+- popd
+
+_________________________________________________
+Herramientas básicas
+_________________________________________________
+
+
+- more        (te da las primeras líneas de lo que hay en el archivo. Para ver la siguiente página hacemos lo mismo que con el 
+                man, utilizamos espacio para)
+- cat         (imprime todo el contenido de un archivo en pantalla.)
+              (Pd: para terminar la ejecución de cat usamos CTRL + C)
+
+- tail        (te muestra las últimas 10 líneas de un archivo. Puedes agregarle un número con el - y pedir más que 10 líneas.)
+
+
+Pd:-------------- SOLO SE MANEJAN ARCHIVOS BINARIOS (DE TEXTO), COMPILADOS 
+
+_________________________________________________
+Variables y entorno
+_________________________________________________
+
+Cada vez que abrimos la terminal en realidad se está ejecutando un programa que se llama .bash_profile que es una serie de 
+0comandos que da de alta unas variables.
+
+Todos los ejecutables tienen una serie de permisos. Cada vez que tengo un nuevo programa tengo que asegurarme
+
+- alias       (ejecuta una serie de comandos que le pasas antes, funciona para crear variables.)
+
+_________________________________________________
+Streams
+_________________________________________________
+
+Operadores para Standard Input, Standard Output y Standard Error
+
+                     STDIN            STDOUT          STDERR
+
+Todo lo que imprime en la pantalla es el output del programa en terminal hay tres streams para recibir y sacar información
+
+Standard Input    0     es por donde le llega la información al programa
+Standard Output   1     es por donde sale los resultados del programa
+Standard Error    2     es donde salen los errores de ejecución
+
+{
+
+  - >         (envia el standard output a un archivo)
+    Manda el STDOUT de `command_1` al inicio de FILE. Si FILE no existe lo crea, si existe _lo sobreescribe_.
+
+
+  - >>        (asigna un valor en terminal)
+    Manda el STDOUT de `command_1` al inicio de FILE. Si FILE no existe lo crea, si existe **lo concatena al fina**
+
+
+  - |         (encamina la salida de un comando a la entrada de otro)
+    Manda el STDOUT de `command_1` al STDIN de `command_2`
+
+
+  - <         (trae de un archivo los datos hacia el estandard input)
+    Manda al STDIN de `command_1` el contenido de FILE.
+  
+
+  - tail -f   (para ver lo que se va agregando a un archivo sin modificarlo)
+
+}
+
+_________________________________________________
+Procesos desde la terminal
+_________________________________________________
+
+  - top         (muestra todos los procesos que estan corriendo en la computadora, porcentaje de cpu, tiempo)
+
+                  muestra
+                  cual es su: 
+                  IPD           (process ID, identificador del proceso) 
+
+                  al precionar 'o' entiende orden y se puede ordenar de mayor a menor por:
+
+                  - cpu
+                  - pid
+
+                  con 'q' salimos de top
+
+  - kill -9 (PID) (Sirve particularmente para matar procesos sin preguntar)
+
+
+_________________________________________________
+Encadenado de procesos
+_________________________________________________
+
+para ello podemos enviar nuestros procesos a background y para ello usamos el apuntador '&'
+
+  - &         (apuntador)
+
+  para mandar a bandera se hace con ' un espacio al final y despues un ampersan '&''
+
+con punto y coma se ejecuta algo más y esé no se va a ejecutar hasta que se ejecute todos
+    ejemplo:  
+              - php 1-streams.php 4; echo 'hola mundo'; php 1-streams.php 7
+
+              - para terminar cada proceso este se tiene que detener con CTRL + C, para ejecutar el siguiente
+              
+
+  - wild card (*)   (Esto lo que va a mostrar todos los archivos que incluyan el prefijo de lo que estes ingrresando o el sufijo)
+
+  - ps -wA (en mac) (manda una lista de todos los comandos que se estan ejecutando en este momento)
+    ps -wS (linux)
+
+  - ps -wA | WC -l  (wherecount) (manda cuantas lineas se estan ejecutando) 
+
+  - grep este comando busca especificamente en que linea se menciona una sentencia o mensaje que nosotros escojamos
+
+
+_________________________________________________
+Power Tools: Comandos poderosos de búsqueda
+_________________________________________________
+
+con punto y coma encadenamos comandos... uno detras de otro
+
+  - grep      (Busca cadena de caracteres dentro de expresiones regulares)
+
+              - r         (quiero que lo hagas de manera recursiva (analiza todos los directorios debajo del que estoy yo))
+
+              - e 'beco'  (sirve para buscar expresiones concretas, en este ejemplo es 'beco')
+              
+  - date      (muestra la fecha hasta segundos)
+
+  - time      (entrega el tiempo del procesador)
+
+  - date; grep -r . -e 'nombre del proceso'; date     (Medira cuanto tarda en ejecutarse un proceso)
+
+  - grep -r 'files' -e 'buscar algo';
+
+  - grep -n -r 'files' -e 'buscar algo'               (Va a traer más información especificamente en que linea se va a encontrar el elemento buscado)
+
+  - grep peliculas.csv -e 'Comedy' | wc -l            (esto trae cuantas pelicualas dicen comentdia)
+
+  - find      (a diferencia de grep find busca en cadena de los nombres de los archivos, en la metadata)
+
+  - find . -name  * .php -type f                      (busca y un archivo con nombre despues del .php)    
+
+      type f (archivo)
+      type d (directorio)
+
+_________________________________________________
+Power Tools: curl, zip y tar
+_________________________________________________
+
+  - curl      (emula un navegador. No es un browser como tal, hay uno para terminal pero este solo emula los requests 
+              (peticiones) y los trae.)
+  - zip       (agrega o reemplaza las entradas de un archivo zip de la lista, que puede incluir el nombre especial para comprimir
+              la entrada.)
+  - tar       (es un comando similar a zip, junta varios archivos en uno solo sin comprimirlos. Después se le dicta un algoritmo
+              de compresión, que es zip)
+
+  - tar cfz 'varioscsv.tar.gz' * csv                  (create file, whit zip)
+  
+  - tar zfz 'varioscsv.tar.gz'                        (extrail file, whit zip)
+
+  - awk -F"::" '{printf("%s\n . $)}'                     (sirve para )
+    
+              -F"::"     (Formato para separar columnas)
+
+_________________________________________________
+PIPE
+_________________________________________________
+
+  -|          (lo que hace es mandar el STD OUTPUT del primer comando y lo manda al STD INPUT del segundo comando )
+
+_________________________________________________
+Crontab: Una herramienta para automatizar tareas desde la terminal
+_________________________________________________
+Una de las herramientas más potentes de los sistemas UNIX, que nos permite programar la ejecución de diferentes scripts.
+
+  - contrab -l     (despliega el crontab que tenemos instalado. )
+
+
+              Columna 1: minuto 0-59            
+              Columna 2: hora 0-23
+              Columna 3: día del mes 1-31
+              Columna 4: mes 1-12
+              Columna 5: día de la semana 0-7 (donde 0 y 7 equivalen a domingo)
+              Columna 6: script o comando que queremos que se ejecute
+
+              (por columna se permiten listas por ende se pueden ejecutar con una ',')
+  
+  
+  - crontab -e      (edita las tareas que tengo agendadas. Con la letra i podemos escribir.)
+
+  - #         (se hacen comentarios)
+
+
+Recuerda que el crontab se ejecuta si y solo si la computadora está encendida.
+
+para salir de Vi escribimos....     :WQ! + Enter
+
+
+_________________________________________________
+LINKs 
+_________________________________________________
+
+  - du        (disck usage... Cuanto ocupa cada uno de los nodos que se estan ocupando )
+
+  - du -h     (human readable)
+
+  - du -h -d 1     (En que carpta es donde más especio se utiliza)
+
+
+_______ ALIAS o LINKS SIMBOLICOS______
+
+  - ln -s       (ln es link simbolico y la "S" es para simbolic, siempre apuntale al link)
+
+  ejemplo
+              - ln -s files/ alias_files
+
+
+_________________________________________________
+Usuarios y Permisos
+_________________________________________________
+
+  - whoami     (cuál es el usuario que está operando en ese momento)
+
+Tipos de permisos:
+
+              - r–      (permiso de lectura)
+              - rw-     (permiso de lectura y escritura)
+              - rwx     (permiso de lectura, escritura y ejecución)
+
+              Los permisos tiene valores numéricos: 
+              
+              - r = 4 
+              - w = 2 
+              - x = 1. 
+              
+              Entonces para otorgar permisos debemos darle un número que sea la suma de cada una de estas tres letras.
+
+              En primer lugar aparecen los permisos del
+
+              - owner   (tú) 
+              - después los del grupo 
+              - finalmente los de todo el mundo.

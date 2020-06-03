@@ -1,0 +1,106 @@
+_________________________________________________
+Introducción al desarrollo web
+_________________________________________________
+
+  - HTML                    HyperText Markup Language
+  - ETIQUETAS               Forma en que dividiremos nuestro contenido
+  - CSS                     Cascade styke sheets
+  - JS                      Javascript
+
+_________________________________________________
+¿Qué herramientas necesito para desarrollar?
+_________________________________________________
+
+nesecitamos de un etidor de texto 
+  - coloreado de texto que nos ayude con la sintaxis de nuetro codigo
+
+_________________________________________________
+HTML y su estructura
+_________________________________________________
+
+  Detro de HTML tenemos a sus hijos primero
+    - HEAD
+      - Title
+    - BODY
+      - h1
+      - h2
+      - img
+      - h5
+      - h5
+
+  Estructura logica de nuetro contenido
+
+_________________________________________________
+Etiquetas, atributos y valores
+_________________________________________________
+
+  Todo esta hecho dentro de cajas y todo ello se ven dentro del cajas
+  
+  Los atributos nos permiten darle nuevas caracteristicas a esa etiqueta
+
+
+  - src                     Source nos permite tener una dirección
+  - img                     Imagenes
+    - height
+    - width
+  - target                  Nos redirecciona a una nueva pestaña 
+    - _blank                Siempre que tenga el valor  
+
+
+_________________________________________________
+Definiendo la estructura de nuestro sitio web
+_________________________________________________
+
+  - Comentarios              <!--  --> Así se hace un comentario
+  - section                  
+
+  - article                  sirve para pooner fragmentos muy especificos del blog
+  - img                      es una etiqueta que se cierra en si misma
+
+  cuando se coloca solamente el width la altura se calcula automaticamente
+
+  a traves de una etiqueta se le puede asignar estilos 
+
+
+  SELECTORES                 es como invocar o hacer referencia a las etiquetas html
+
+  SELSECTOR UNIVERsal 
+
+  *     se le da estilo a todo el contenido 
+  ejemplo{
+    border: 1px solid red;
+    margin: 10px;
+  }
+
+SELECTOR DE ETIQUETA{
+  background: blue;
+}
+
+SELECTOR DE ETIQUETA DE ETIQUETA
+
+section{
+  background: purple;
+}
+
+SELECTOR DESCENDENTE
+article h3{
+  color: green;
+}
+
+
+SELECTORES DE CLASE
+.title-a{
+  background: green;
+}
+.title-b{
+  background: red;
+}
+
+SELECTOR DE Introducción
+#guitarra{
+  background:blue;
+}
+#portada{
+  background:purple; 
+  border: red;
+}

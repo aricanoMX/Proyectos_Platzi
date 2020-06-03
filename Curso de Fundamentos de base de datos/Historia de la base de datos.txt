@@ -1,0 +1,596 @@
+------------------------------------------------------------------------------------------------
+        Historia de la persistencia de la información
+------------------------------------------------------------------------------------------------
+
+¿por que necesitamos persistencia?
+
+    por que se comenzo a pasar de boca en boca por lo cual desde la antiguedad se percato que necesitaban persistencia
+
+    despues de ellos fue la escritura cuneiforme de los sumerios en tablillas, pero con el tiempo se percataron de que con ello era muy dificil tranportar la información
+    despues existieron los papiro pero se percataron de igual forma que al ser de materiales vegetales estos podian estropearse con facilidad.
+
+    despues con la llegada de los chinos se descubrio el papel que tenia las ventajas de la portabilidad y no tenia la desventaja de ser vegetales
+    
+    despues fue el film, peliculas de las camaras viejitas
+    despues fueron los discos solidos y posterior a ello la nube
+
+    ¿qué sona las bases de datos ?
+    
+
+    -- Tipos de bases de datos 
+    Relacionales y no Relacionales
+
+        -- Bases de datos Relacionales
+            SQL SERVER de microsoft
+            ORACLE 
+
+            --- Open Source
+    
+                Mysql
+                (creada despues de que oracle comprara MySQL) MariaDB
+                Postgress
+
+        -- Bases de datos no Relacionales
+            cassandra
+            elasticsearch
+            linamo mariaDB
+            mongodb
+            firestore
+
+    -- Servicios
+        Autoadministrados
+            Es la base de datos que tu instalas y te encargas de las actualizaciones, consistencia de datos
+
+        Administrados 
+            Servicios que ofrecen las nubes actuales (Amazon, Google, Azure de microsoft).
+
+------------------------------------------------------------------------------------------------
+        Historia de las bases de datos Relacionales (RDB)
+------------------------------------------------------------------------------------------------
+
+    surgen de la necesidad de conservar la información mas allá de lo que existe en la ram
+
+    surgen las bases de datos cuando se tuvo la necesiddad de conservar la informacion más allá de la necesidad que exisrte en la memoria ram,
+    a partir de ahi se tuvo la necesidad de tener una forma facil de guardar los datos y extraer se comenzaron a buscar formas inteligentes de hacerlo
+
+    * bases de datos basadas en archivos no es lo mismo que bases de datos basadas en documentos
+
+    las bases de datos basadas en archivos era basicamente guardar documentos serparados por comas, texto plano facil de guardar pero dificil de reorganizar
+
+    inventor de las bases relacionales fue EDGAR COOD (12 mandamientos de codd)
+
+    codd tambien invento el algebra relacional, como tenemos datos que se pueden unir y mezclar con distintas caracteristicas
+
+------------------------------------------------------------------------------------------------
+        Entidades y atributos
+------------------------------------------------------------------------------------------------
+
+    Entidades y atributos
+
+    - Entidad: es algo similar a un objeto.   (REPRESENTA ALGO EN EL MUNDO REAL)
+        Ejemplo: 
+                (SE ENCIERRAN EN RECTANGULOS)   Automóvil
+                                                Manzana
+                                                etc...
+
+        ESTANDAR: por convenio las entidades se colocan en plural, ya que estas representan un grupo de objetos.
+
+    - Atributos: son las caracteristicas con las que cuentan las entidades y que los hacen ser entidaddes.
+        Ejemplo:
+                (SE ENCIERRA EN CIRCULOS)       Volante
+                                                motor   
+                                                modelo
+                                                etc...
+        
+    - Artributo multivaluado quiere decir que tiene más de un valor, quiere decir que existe más de 1 atributo.
+        Ejemplo:
+                (SE ENCIERRA EN UN DOBLE OBVALO)   ((llantas))
+
+    - Atributos compuestos, son los atributos que a su vez estan compuestos por otros atributos
+        Ejemplo:
+                    motor 
+                            esta compuesto por diversas partes  
+                    pistones
+                    bujias
+                    etc...
+
+    - Atributos especiales, no se calcula igual que los demas, esta se puede inferir con ayuda de los demas.
+        Ejemplo:
+                (SE DIBUJA CON OBVALO PERO PUNTEADO EN LA ORILLA)
+    
+    Los atributos llave son aquellos que identifican a la entidad y no pueden ser repetidos. Existen:
+        
+        Naturales: Son inherentes al objeto como el número de serie
+        Clave artificial: No es inherente al objeto y se asigna de manera arbitraria.
+
+Entidades débiles: No pueden existir sin una entidad fuerte y se representan con un cuadrado con doble línea.
+
+        Identidades débiles por identidad: No se diferencian entre sí más que por la clave de su identidad fuerte.
+        Identidades débiles por existencia: Se les asigna una clave propia.
+
+------------------------------------------------------------------------------------------------
+        Entidades de Platzi Blog
+------------------------------------------------------------------------------------------------
+Nuestro proyecto será un manejador de Blogpost. Es un contexto familiar y nos representará retos muy interesantes.
+
+Primer paso: Identificar las entidades
+Segundo paso: Pensar en los atributos
+
+------------------------------------------------------------------------------------------------
+        Relaciones
+------------------------------------------------------------------------------------------------
+
+Las relaciones nos permiten ligar o unir nuestras diferentes entidades y se representan con rombos. 
+                Por convención se definen a través de verbos.
+
+        (ESTAS SE REPRESENTAN MEDIANTE UN ROMBO en una relacion, unida por sus entidades )
+
+    Ejemplo: 
+
+            Entidad:
+                    Automovil
+                    Dueño
+
+                    lo que nos falta para unir estas 2 entidades es una relacion y por estandar esta se define mediante un verbos
+
+            Relación:
+                    [Dueño]----<(tiene)>---[un Automovil]
+
+    Otro Ejemplo
+
+            Entidades:
+                    Jugadores
+                    Equipo
+
+            Relación:
+                    [Jugadores]----<(Pertenecen)>---[Equipo]
+
+
+Las relaciones tienen una propiedad llamada cardinalidad y tiene que ver con números. 
+Cuántos de un lado pertenecen a cuántos del otro lado:
+
+    Cardinalidad: 1 a 1 (uno a muchos)
+            Conector en diagrama fisico
+
+                        -|------------|-
+                                o
+                        -||------------------||-
+
+    Cardinalidad: 0 a 1 (ninguno a uno, cero a uno)
+            Conector en diagrama fisico
+
+                        -|- - - - - - - - - -|- (Separado por linea punteada)
+    
+    Cardinalidad: 1 a N (uno a muchos)
+            Conector en diadrama fisico
+
+                        -|-------------<
+                                o
+                        -|------------o<
+                                o
+                        -||------------|<
+    
+    Cardinalidad: 0 a N (cero a muchos)
+            Conector en diadrama fisico
+
+                        -|o- - - - - - - - - - - - |<
+                                o
+                        -| - - - - - - - - - - - - |<
+
+------------------------------------------------------------------------------------------------
+        Múltiples muchos 
+------------------------------------------------------------------------------------------------
+    Cardinalidad más importante y múy especial
+
+    Cardinalidad: N a N (muchos a muchos)
+            Conector en diadrama fisico
+
+                        >--------------<
+                                o
+                        >|------------|<
+
+        Ejemplo: Alumno y Clase
+
+            - Un alumno puede tener muchas clases
+            y 
+            - una clase puede tener mucho alumnos
+
+------------------------------------------------------------------------------------------------
+        Diagrama Entidad - Relación 
+------------------------------------------------------------------------------------------------
+    ¿Qué es un diagram?
+
+        Es una especie de mapa, sirve para entender, cuales son la entidades con las que trabajaremo, cuales son las relaciones y que papel va a jugar dentro de ellas los sistemas o apps que podamos desarrollar.
+
+------------------------------------------------------------------------------------------------
+        Diagrama Físico: tipos de datos y constraints
+------------------------------------------------------------------------------------------------
+
+        Diagrama Físico: tipos de datos y constraints
+        Para llevar a la práctica un diagrama debemos ir más allá y darle detalle con parámetros como:
+
+        Tipos de dato:
+
+        Texto: 
+                CHAR (n)(cadena de memoria del numero de caracteres que vayas a ocupar y reservarlo), 
+                VARCHAR (n)(reserva de manera dinamica espacio en memoria dependiendo de la cantidad que se utilize,tiene un limite de 255 caracteres), 
+                TEXT (cadenas de texto muy grande)
+        
+        Números: 
+                INTEGER (entero), 
+                BIGINT (enteros muy grandes), 
+                SMALLINT (enteros muy pequeños de 99 o menos), 
+                DECIMAL (n,s)(lo primero que añades es el numero y luego los decimales, para ser más especificos), 
+                NUMERIC (n,s)(lo primero que añades es el numero y luego los decimales, para ser más especificos)
+        
+        Fecha/hora: 
+                DATE (sirven para saber la fecha de cuando un registro fue creado, modificado o borrado), 
+                TIME (contiene la hora exacta de cuando fue creado un registro para ser más especifico), 
+                DATETIME (Tipo de dato de 8 bits, contienen la fecha de creacion incluso en milisegundos para ser aun más especificos), 
+                TIMESTAMP(Tipo de dato de 4 bits, )
+
+        Lógicos: 
+                BOOLEAN (Es un tipo de dato binario (sirve para hacer validaciones) solo tiene 2 valores posibles, cierto o falso, 1 o 0, activo o inactivo)
+
+
+        Constraints (Restricciones o reglas)
+
+        NOT NULL: Se asegura que la columna no tenga valores nulos.
+        UNIQUE: Se asegura que cada valor en una columna no se repita con ningun otro. 
+        PRIMARY KEY: Es una combinación de NOT NULL y UNIQUE, es aquel campo que define que es absolutamente unico.
+        FOREIGN KEY: Identificador PRIMARY KEY en una nueva tabla, de manera única una tupla en otra tabla.
+        CHECK: Se asegura que el valor en la columna cumpla una condición dada
+        DEFAULT: Coloca un valor por defecto cuando no hay un valor especificado (NULL)
+        INDEX: Se crea por columna para permitir búsquedas más rápidas en nuestra tabla de base de datos.
+    
+------------------------------------------------------------------------------------------------
+        Diagrama Físico: Normalización
+------------------------------------------------------------------------------------------------
+
+        Nos ayuda a estandarizar cada uno de nuestros datos, nos permite separa cada elemento de nuestra base de datos, de tal forma que cumpla con las REGLAS QUE CODD establecio para hacer una base de datos relacional.
+
+        Primera forma normal (1FN) 
+            Atributo atómico (Sin campos repetidos)
+            (Esta FN nos ayuda a eliminar los valores repetidos y no atómicos dentro de una base de datos.
+
+
+                Formalmente, una tabla está en primera forma normal si:
+
+                    * Todos los atributos son atómicos. Un atributo es atómico si los elementos del dominio son simples e indivisibles.
+                    * No debe existir variación en el número de columnas.
+                    * Los campos no clave deben identificarse por la clave (dependencia funcional).
+                    * Debe existir una independencia del orden tanto de las filas como de las columnas; es decir, si los datos cambian de orden no deben cambiar sus significados.
+                
+                
+                Se traduce básicamente a que si tenemos campos compuestos como por ejemplo “nombre_completo” que en realidad contiene varios datos distintos, en este caso podría ser: 
+                
+                    “nombre” 
+                    “apellido_paterno” 
+                    “apellido_materno” 
+                    etc.
+
+                También debemos asegurarnos que las columnas son las mismas para todos los registros, que no haya registros con columnas de más o de menos.
+
+                Todos los campos que no se consideran clave deben depender de manera única por el o los campos que si son clave.
+
+                    Los campos deben ser tales que si reordenamos los registros o reordenamos las columnas, cada dato no pierda el significado.
+        
+        Segunda forma normal (2FN) 
+            Primero tiene que estar en la 1ra forma normal y cada campo de la tabla debe depender de una clave única.
+            (Esta FN nos ayuda a diferenciar los datos en diversas entidades.)
+
+            
+            Formalmente, una tabla está en segunda forma normal si:
+
+                * Está en 1FN
+                * Sí los atributos que no forman parte de ninguna clave dependen de forma completa de la clave principal. Es decir, que no existen dependencias parciales.
+                * Todos los atributos que no son clave principal deben depender únicamente de la clave principal.
+            
+            
+            Lo anterior quiere decir que sí tenemos datos que pertenecen a diversas entidades, cada entidad debe tener un campo clave separado. 
+
+        Tercera forma normal (3FN)
+            Tiene que cumplir la 1FN y 2FN y los campos que NO son claves No deben tener dependencias.
+            (Esta FN nos ayuda a separar conceptualmente las entidades que no son dependientes.)
+
+
+            Formalmente, una tabla está en tercera forma normal si:
+
+                * Se encuentra en 2FN
+                * No existe ninguna dependencia funcional transitiva en los atributos que no son clave
+
+            Esta FN se traduce en que aquellos datos que no pertenecen a la entidad deben tener una independencia de las demás y debe tener un campo clave propio.
+
+
+        Cuarta forma normal (4FN)
+            Tiene que cumplir con la (1FN, 2FN y 3FN) despues dice que los campos multivaluados se identifican por una clave única.
+            (Esta FN nos trata de atomizar los datos multivaluados de manera que no tengamos datos repetidos entre rows.)
+
+            Formalmente, una tabla está en cuarta forma normal si:
+
+                * Se encuentra en 3FN
+                * Los campos multivaluados se identifican por una clave única
+                * Esta FN trata de eliminar registros duplicados en una entidad, es decir que cada registro tenga un contenido único y de necesitar repetir la data en los resultados se realiza a través de claves foráneas.
+
+________________________________________________________________________________________________________
+
+        De esta manera, aunque parezca que la información se multiplicó, en realidad la descompusimos o normalizamos de manera que a un sistema le sea fácil de reconocer y mantener la consistencia de los datos.
+
+        Algunos autores precisan una 5FN que hace referencia a que después de realizar esta normalización a través de uniones (JOIN) permita regresar a la data original de la cual partió.
+
+------------------------------------------------------------------------------------------------
+         Diagrama Físico: Normalización Platziblog 
+------------------------------------------------------------------------------------------------
+
+    **Anotación importante **
+
+        Regla general: cuanto tienes una cardinalidad 1 a 1 no importa a que tabla le coloques la referencia (llave foranea) es indistinto.
+
+        Cuando tienes una cardinalidad 1:N es muy importante que la tabla donde tienes la terminación mucho, en esa tabla colocaras la llave foranea de la tabla que tiene uno (1).
+
+        Ejemplo: Posts y Usuarios
+
+        La llave foranea será usuarios (1) en la tabla Posts(N)
+
+        En la relación de muchos a muchos surge la duda de a quien se le pone la llave de cual para conectarla:
+
+            Estas se tienen que trabajar aparte para identificar de mejor manera la unión 
+
+            Se crea una tabla que GENERALMENTE lleva la unión de ambas entidades y esta obtiene ambas llaves primerias de cada entidad y se les agrega tambien la particularidad de ser llaves foraneas
+
+------------------------------------------------------------------------------------------------
+         QUÉ es un RBD?
+------------------------------------------------------------------------------------------------
+
+    RDBMS
+        Ingles ( Relational Database Managment System )
+                            o
+        Español( Sistema Manejador de Base de Datos Relacionales )
+
+    ----------- (Es un programa que se encarga de cumplir las reglas de codd)
+    
+        Existen distintos tipos de RDBMS:
+
+            MySQL
+            oracle
+            Postgress SQL
+   
+------------------------------------------------------------------------------------------------
+         Sql hasta en la sopa, Historia de SQL hasta en la sopa
+------------------------------------------------------------------------------------------------
+
+    SQL significa Structured Query Language y tiene una estructura clara y fija. 
+
+    Su objetivo es hacer o unificar un solo lenguaje para consultar cualquier manejador de bases de datos volviéndose un gran estándar.
+
+    Ahora existe el 
+        
+        NOSQL o Not Only Structured Query Language 
+        que significa 
+                que no sólo se utiliza SQL en las bases de datos no relacionales.
+
+    Ejemplo: 
+
+        Base de datos CASSANDRA tiene un lenguaje llamado cualquier
+        
+        BigQuery lenguajes para inteligencia artificial
+
+------------------------------------------------------------------------------------------------
+         DDL : Data Definition Languaje
+------------------------------------------------------------------------------------------------
+
+    CREATE:
+        Nos ayuda a crear una base de datos, tabla, vista, indice.
+
+        Database o bases de datos
+        Table o tablas. Son la traducción a SQL de las entidades
+        View o vistas: Se ofrece la proyección de los datos de la base de datos de forma entendible.
+
+        Ejemplo:
+
+            CREATE DATABASE Unicafe;
+            USE DATABASE unicafe;
+
+
+        Ejemplo:
+            CREATE TABLE people(
+                
+            );
+
+    ALTER:
+        Nos ayuda modificar elementos dentro de una tabla.
+    
+    DROP:
+        Nos ayuda a borrar, tablas, vistas, schemas, columna.
+
+------------------------------------------------------------------------------------------------
+         DDL : ALTER
+------------------------------------------------------------------------------------------------
+
+    Los Views toman datos de la base de datos, los hacen presentables y los convierten en algo que podamos consultar de manera recurrente.
+
+        CREATE VIEW v_brasil_customers AS 
+            SELECT customer_name,
+            contact_name
+            FROM v_brasil_customers
+            WHERE country ="Brasil";
+
+            ALTER TABLE people
+            ADD date_of_birth date;
+
+            ALTER TABLE people
+            ALTER COLUMN date_of_birth year;
+
+            ALTER TABLE people
+            DROP COLMN date_of_birth;
+
+------------------------------------------------------------------------------------------------
+         DDL : DROP
+------------------------------------------------------------------------------------------------
+
+    Está puede ser la sentencia ¡más peligrosa!, sobre todo cuando somos principiantes. 
+    Básicamente borra o desaparece de nuestra base de datos algún elemento.
+
+        DROP TABLE people;
+        DROP DATABASE unicafe;
+
+------------------------------------------------------------------------------------------------
+         DML : DATA MANIPULATION LANGUAJE
+------------------------------------------------------------------------------------------------
+
+    DML trata del contenido de la base de datos. Son las siglas de Data Manipulation Language y sus comandos son:
+
+        Insert: Inserta o agrega nuevos registros a la tabla.
+
+            INSERT INTO people(last_name, first_name, address, city)
+            VALUE ('Hernandez', 'Laura', 'Calle 21','Monterrey');
+
+        Update: Actualiza o modifica los datos que ya existen.
+
+            UPDATE people
+            SET last_name = 'Chavez', city = 'Mérida'
+            WHERE person_id = 1;
+
+            UPDATE people
+            SET first_name = 'Juan'
+            WHERE city = 'Mérida';
+
+            UPDATE people
+            SET first_name = 'Juan';
+
+        Delete: Esta sentencia es riesgosa porque puede borrar el contenido de una tabla.
+
+            DELETE FROM people
+            WHERE person_id = 1;
+
+            DELETE FROM people;
+
+        Select: Trae información de la base de datos. (tiene 2 partes donde le indicas que campos quieres ver y luego from de que)
+
+            SELECT first_name, last_name
+            FROM people; 
+
+
+
+------------------------------------------------------------------------------------------------
+        ¿Qué tan standard es SQL?
+------------------------------------------------------------------------------------------------
+
+    La utilidad más grande de SQL fue unificar la forma en la que pensamos y hacemos preguntas a un repositorio de datos. Ahora que nacen nuevas bases de datos igualmente siguen tomando elementos de SQL.
+
+------------------------------------------------------------------------------------------------
+        ¿Por qué las consultas son tan importantes?
+------------------------------------------------------------------------------------------------
+
+    Las consultas o queries a una base de datos son una parte fundamental ya que esto podría salvar un negocio o empresa.
+
+    Alrededor de las consultas a las bases de datos se han creado varias especialidades como ETL
+    
+        ETL correspondería al acrónimo de:
+            Extract (Extraer)
+            Transform (Transformar)
+            Load (Cargar)
+
+     o simplemente transformación de datos, business intelligence e incluso Machine Learning.
+
+------------------------------------------------------------------------------------------------
+        Estrucutra básica de un Query
+------------------------------------------------------------------------------------------------
+
+    Los queries son la forma en la que estructuramos las preguntas que se harán a la base de datos. 
+    Transforma preguntas en sintaxis.
+
+    El query tiene básicamente 2 partes: 
+    
+        SELECT y FROM y puede aparecer una tercera como WHERE.
+
+        Ejemplo: 
+
+            SELECT city, count(*) AS total
+            FROM people
+            WHERE active = true
+            GROUP BY city
+            ORDER BY total DESC
+            HAVING total >=2;
+
+        La estrellita o asterisco (*) quiere decir que vamos a seleccionar todo sin filtrar campos.
+
+------------------------------------------------------------------------------------------------
+        SELECT
+------------------------------------------------------------------------------------------------
+
+    SELECT se encarga de proyectar o mostrar datos.
+
+    El nombre de las columnas o campos que estamos consultando puede ser cambiado utilizando AS después del nombre del campo y poniendo el nuevo que queremos tener:
+
+        SELECT *
+        FROM posts;
+        
+        SELECT titulo, fecha_publicacion, estatus
+        FROM posts;
+
+
+        SELECT titulo AS encabezado
+        FROM posts;
+
+        SELECT titulo AS Encabezado, fecha_publicacion AS Publicado_en, estatus AS Estado
+        FROM posts;
+
+    Existe una función de SELECT para poder contar la cantidad de registros. Esa información (un número) será el resultado del query:
+        
+            SELECT COUNT(*)
+            FROM posts;
+
+            Consulta count renombrada
+
+                SELECT count(*) AS Numero_de_posts
+                FROM posts;
+
+------------------------------------------------------------------------------------------------
+        FROM
+------------------------------------------------------------------------------------------------
+
+    FROM indica de dónde se deben traer los datos y puede ayudar a hacer sentencias y filtros complejos cuando se quieren unir tablas. 
+        
+        La sentencia compañera que nos ayuda con este proceso es JOIN.
+        (JOIN quiere decir juntar o unir y no ayuda a unir tablas a través de las llaves foraneas)
+
+        Existen diferentes tipos de JOIN
+
+
+    Los diagramas de Venn son círculos que se tocan en algún punto para ver dónde está la intersección de conjuntos. Ayudan mucho para poder formular la sentencia JOIN de la manera adecuada dependiendo del query que se quiere hacer.
+
+------------------------------------------------------------------------------------------------
+        
+------------------------------------------------------------------------------------------------
+
+
+
+------------------------------------------------------------------------------------------------
+        
+------------------------------------------------------------------------------------------------
+
+
+
+------------------------------------------------------------------------------------------------
+        
+------------------------------------------------------------------------------------------------
+
+
+
+------------------------------------------------------------------------------------------------
+        
+------------------------------------------------------------------------------------------------
+
+
+
+------------------------------------------------------------------------------------------------
+        
+------------------------------------------------------------------------------------------------
+
+
+
+------------------------------------------------------------------------------------------------
+        
+------------------------------------------------------------------------------------------------
+

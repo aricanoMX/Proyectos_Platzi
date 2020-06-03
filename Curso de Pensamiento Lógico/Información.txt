@@ -1,0 +1,94 @@
+Teoría de conjuntos
+
+Nos permite utilizar los conjuntos para analizar, clasificar y ordenar conocimientos desarrollando a compleja red conceptual en que almacenamos nuestro aprendizaje.
+
+    * Elemento: Cada uno de los términos que conforma un conjunto.
+
+        Elemento que pertenece al conjunto A 
+            A = {1, 3, 5}
+            1 £ A
+    
+    * Conjunto: Agrupación de elementos que pertenecen a una misma categoría.
+        Aquie se clasifica y se ordena un grupo de conjuntos
+
+        Clasificación por xtension
+        cada elemento esta dentro de las llaves, el ejemplo comparte caracteristicas en este caso son las vocales
+            ejemplo A={A, E, I, O, U}
+
+        Clasificación por comprensión: 
+        sus elementos se determinan a travez de llaves 
+            ejemplo A={x/x es una vocal}
+
+        Clasificación por Diagramas de Venn
+        Son regiones cerrads que nos permiten visualizar las relaciones entre los conjuntos.
+
+        A ={3, 4, 5, 6}     B={{0, 3, 6}   C={0, 3, 5}
+
+
+Conceptos básicos, 
+        
+        * Subconjunto: Conjunto de elementos que tienen las mismas características y que está incluido dentro de otro conjunto más amplio.
+
+        ejemplo
+        A={1, 2, 3, 4, 5}    B={1, 3, 5}    C={0, 6}
+
+        B c A, B es subconjunto de A, 
+        C ¢ A, C no es subconjunto de A.
+
+Tipos de conjuntos
+
+    Universo (U)
+    Formado po todos los elementos del tema de referencia 
+        ejemplo: U {x/x es un animal}
+
+    
+    Vacio ({})
+    No tiene ningun elemento dentro de el, ningun elemento cumple dicha condición
+        ejemplo: A = Conjunto de meses del año que terminen en s
+
+    Conjunto Unitario
+    Tiene solo un elemento dentro de el 
+        ejemplo: A = Conjunto de meses del año que tienen menos de 30 dias 
+
+    Conjuntos disjuntos 
+    Se refiere a aquellos conjuntos que tienen elementos que NO pertenecen a ningun conjunto de ellos al mismo timpo.
+    
+    Conjuntos Iguales 
+    Aquellos conjuntos que comparten todos sus elementos entre si
+
+    Conjunto Infinito
+    Es aquel conjunto cuya cantidad de elementos no se pueden contar
+
+Operaciones entre conjuntos
+
+    Union: La union es unir distintos elmentos y la union de todos los elementos sin repetición.
+
+    Intersección: Es con aquellos elementos que se repiten tanto en A como en B, (en este caso la piña y la mansana).
+                    (area entre ambas figuras)
+
+    Diferencia: (\) Este es la diferencia entre conjuntos tal conjunto menos tal elemento.
+                    (Area que queda cuando se restal la diferencia)
+
+Interpretación de los números y signos
+
+    Recta numerica: podemos asignar si son numeros reales.
+
+    Ley de signos:      | + * + = + |
+                        | + * - = - |
+                        | - * + = - |
+                        | - * - = + |
+
+Razones
+
+    EStos es como se puede ejemplificar las relaciones, y para ello tenemos que simplificar y se expresa de la siguiente manera |3:4| o |7:12|
+
+Proporción
+
+    Igualdad entre 2 razones  |A/B = C/D|
+
+Teorema de thales
+
+    Este teorema nos ayudara a encontrar cantidades desconocidas, a partir de lineas rectas, paralelas (nunca se cruzan) o perpendiculares(Se cruzan solo en un punto).
+
+    
+     

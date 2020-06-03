@@ -1,0 +1,138 @@
+_________________________________________________
+  Introducción al curso: ¿Qué es y cómo funciona la terminal?
+_________________________________________________
+  
+- Necesitamos de la terminal por que nos sirve de interprete y para darle instrucciones que la computadora pueda comprender.
+
+- Lo mismo que puedes hacer por GUI puedes hacerlo por TERMINAL y de manera más rapida y eficiente.
+
+En terminal tenemos el prompt y el cursor 
+
+- Comando en termial = Nombre del programa + Parámetro + Modificadores 
+      - Parametro                 (Información adicional para la ejecución del programa)
+      - Modificadores             (Estos altera que es lo que el programa va a hacer)
+
+      ejemplo:
+
+      - comando -flag1 -flag2 arg1 arg2
+
+- date                            (Muestra la fecha de hoy)
+
+- echo                            (Manda un mensaje en la pantalla )
+    - echo 'Mensaje'
+
+- man                             (muestra información de otros comandos)
+                                  
+- la terminal tiene autocompletado y con la tecla hacia arriba se pueden ver los comandos que previamente se utillizaron
+
+- history                         (Este comando nos muestra el historial de todos los camandos utilizados alguna vez)
+    - !491                        (Con ! y el nummero del comando anteriormente utilizado podemos ejecutarlo de nuevo)
+
+_________________________________________________
+  ¿Qué es y cómo funciona el sistema de archivos? - Organización de archivos
+_________________________________________________
+
+todo el conjunto de carpetas y archivos forma el arbol
+
+identificación de archivos  
+    /directorio/subdirectorio/archivo
+    
+    los archivos no pueden contener '*, ?, !'
+    y tambien estan limitadas cuantos caracteres deben de tener
+
+- ls                              (De ven todos lo archivos de un directorio)
+    - ls -a                           (Muestra todos los archivos, incluso los que no se pueden ver a simple vista)
+    - ls -l                           (Ordena los archivos de manera de lista)
+    - ls -lh                          (Muestra la misma información con unidades de tamaño en KB, MB)
+    - ls -t                           (Ordena los archivos por fecha de modificación)
+    - ls -x                           (Ordena elementos primero por nombre y después por extensión)
+    - ls -X                           (Ordena los elementos primero por extensión y luego por nombre)
+    - ls -R                           (Muestra el contenido de todos los subdirectorios de forma recursiva)
+    - ls -S                           (Ordena los resultados por tamaño de archivo)
+
+
+( . y .. son archivos virtuales, tambien llamados punteros)
+
+- .                             (Hace referencia al puntero en donde nos encotramos actualmente)
+- ..                            (Este hace referencia la puntero padre, directorio anterior al actual)
+
+- pwd  (print working directory)  (Este nos dice en que directorio o ubicacion nos encontramos actualmente)
+                                    
+
+- cd   (change directory)         (Recibe el parametro de a que directorio nos queremos mover)
+    - cd /home                        (Nos lleva al directorio home)  
+    - cd ~                            (Nos lleva directamente al home)
+    - cd -                            (Nos lleva al ultimo directorio visitado1)
+
+    - cd .                            (Hace referencia al directorio donde nos encontramos actualmente)
+    - cd ..                           (Hace referencia al directorio padre, directorio anterior al actual)
+
+- mkdir                           (Sirve para crear directorios)        
+    - mkdir test
+  
+- cp                              (Sirve para copiar archivos)
+    - cp test.py test/                (Copia el archivo test y lo manda al directorio test/)
+
+- rm                              (Sirve para borrar archivos)
+
+- mv                              (Sirve para mover, aunque no mueve el archivo sino que los mueve y elimina del directorio actual)
+    - mv ../test.py .                 (Mueve desde el directorio anterior tast.py y lo mueve al directorio actual)
+
+- rmdir                           (Borra los directorios)
+    - rmdir 'nombre directorio'       (Es importante borrar el contenido del directorio)(NO SE PUEDE BORRAR UN DIRECTORIO CON CONTENIDO)
+
+
+_________________________________________________
+  Manejo de archivos de texto y utilidades interactivas
+_________________________________________________
+
+Archivos binarios                 (Se entiende por archivo binario aquel archivo que esta pensado y escrito de algua manera para
+                                  que sea interpretado por una computadora)
+
+    - programas ejecutables
+    - documentos
+    - fotos
+
+Archivos de texto                 (Se entiende por archivos de texto aquellos que se corresponden con caracteres)
+
+    - codigo fuente 
+    - archivos de texto
+    - configuraciones   
+
+utilidades interactivas
+    
+- vim                             (vim + nombre del archivo a ejecutar)
+    - i                               (Para insertar en vim tenemos que presionar la tecla i para comenzar a insertar texto)
+    - esc                             (Salimos del modo edición )
+    - :                               (Se activa el modo de comandos)
+    - :W                              (Se guarda el contenido de vim)
+    - :q + enter                      (Salir de vim)
+
+    - :x                              (Graba y salimos del modo edicion)
+
+    - para crear un archivo nuevo solo llamamos a la utiliria + el nombre del archivo nuevo
+        - vim nuevo.txt    
+    
+    - nano                            (nano + nombre del archivo a ejecutar)
+
+
+_________________________________________________
+  Utilidades batch y batch avanzadas
+_________________________________________________
+
+utileria par ver contenido de archivos
+
+- cat + 'archivo'                 (Sirve para ver el contenido de un archivo)
+
+- head + 'archivo'                (Sirve par ver solo las primeras lineas de un archivo)
+    - head -n 5 'tables.txt'          (Sirve para imprimir un numero especifico de lineas que querramos mostrar)
+  
+- tail + 'archivo'                (Sirve par ver solo las ultimas lineas de un archivo)
+
+- grep                            (Funciona funto con expresiones regulares que quieras utilizar)
+    - grep 'Hanks' dump1.sql          (Muestra si existe o no una linea con el contenido hanks dentro de ella)
+    - grep -i 'Hanks' dump1.sql       (La i es para que sea indistinto entre mayusculas y minusculas)
+    - grep -i 'Hanks,)$' dump1.sql    ($ Sirve para buscar una palabra de que termine con la palabra hanks)
+
+- sed  (strean editor)            (Sirve para tratar flujos)(pero en este se puede remplazar una expresión por otra)
+    - sed 's/Hanks/Selleck/g dump1.sql (s' sirve para remplazar hanks por selleck y la /g es que se realiza durante todo el flujo)
