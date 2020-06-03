@@ -52,9 +52,12 @@ $ git merge 										Sirve para hacer fusión entre ramas
 									EJEMPLO= ":x"
 									Y ENTER
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> 65ca7ba19c61cd107707272826de7fd64ea35896
 $ git merge (origin/master) 		Esto lo que hace es fusionar el branch que sirve de vigia y nuestra branch local en mi caso 
 																master	
 
