@@ -1,0 +1,209 @@
+Curso de SQL y MySQL
+
+-------------------------------------------------
+CLASE 1 LA CONSOLA DE MySQL
+-------------------------------------------------
+
+
+ORM = Object Relationship Model
+
+para entra a MySQL tenemos que escribir (  mysql -u  root -h  127.0.0.1 -p  )
+                                                -u usuario   
+                                                -h es el host quiere decir en que servidor o domino donde esta tu base de datos, ya sea localhost o 127.0.0.1
+                                                -p quiere decir password y existen 2 formas, mandar el password en abierto o al final de la letra p o hasta que se loguee para que pida el password, mi password es 570002081995Am
+
+show databases;     indica cuales son las bases de datos que existen en este ordenador.
+
+use (nombre de la database);     es usado para seleccionar una base de datos.
+
+show tables;        muestra las tablas pertenecientes a la base que acabamos de entrar.
+
+select database();   me dice cual es al base de datos que esta seleccionadad al momento de la operación.
+
+
+LA CONSOLA SIRVE PARA ESCRIBIR Y EJECUTAR COMANDOS.
+
+-------------------------------------------------
+CLASE 2 ¿Qué es una base de datos?
+-------------------------------------------------
+
+una base de datos es el lugar donde almacenamos información y relaciones entre esta información que luego nos permite utilizarla para obtener datos aun más especificos.
+
+-------------------------------------------------
+CLASE 3 Comando CREATE
+-------------------------------------------------
+
+CANTIDAD DE TIPOS DE DATOS EN MYSQL ES ENORME.
+
+::: IMPORTANTE :: Existen 2 principales tipos de tablas INNODB y MyISAM
+
+innoDB es un tipo de tabla de base de datos más 
+        nueva
+        más robusta
+        más recuperable en caso de perder una tabla
+        pero es más lenta
+
+
+MyISAM es una tabla mucho más 
+        muy directa
+        muy sencilla
+        transacciones 1 a 1 
+        velocidad mayor
+
+Tambien existen 2 tipos de TABLAS para estrategias, una es la tabla de catalogo y la otra es de operación.
+
+La tabla de catálogo
+    Esta crecera a un orden lento
+        por ejemplo numero de usuarios no crecera tanto respecto al numero de prestamos que se tienen dia a dia.
+        (ESTAS TABLAS ES RECOMENDABLE TENERLAS EN INNODB)
+
+La tabla de operación
+    Estas crecen de manera rapida 
+        (Estas se tienen mucho acceso a disco duro por ende se utilizan constantemente  se colocan en MyISAM para darle mayor agilidad a nuestro sistema
+
+-------------------------------------------------
+CLASE 4 Tipos de columnas/Creación de tablas books
+-------------------------------------------------
+
+COMANDOS
+
+    CREATE database platzi_operation; (sirve para crear tablas basesd de datos, vistas )
+    
+    CREATE databese IF NOT EXISTS platzi_operation; (sirve para verificar si existe o no creada una base de datos y                                                    en caso de no estarlo que proceda a crearla).
+
+    SHOW WARNINGS;      muestra los warnings que se hayan provocado tras la ultima consulta.
+
+
+-- TIP ::: UNA BUENA PLACTICA ES DEFINIR EL NOMBRE DE UNA TABLA CON EL PLURAL DEL SUSTANTIVO QUE VAMOS A GUARDAR EN INGLES
+  
+  por ejemplo: si se van a guardar libros que se llame BOOKS
+
+---------------------------------------
+CREATE TABLES IF NOT EXISTS{
+    Las tablas tambien pueden usar el IF NOT EXISTS para valida si estan previamente creadas o no y la base de datos no arroje errores.
+};
+---------------------------------------
+PD: tabla y TUPLA es lo mismo.
+
+-- TIP ::: NECESARIO (SIEMPRE) Necesita un ID, para poder ubicar una tupla de manera única.
+        (por ello es comun usar un entero que sea auto incremental.)
+
+
+    -- Entero       se representa con un INTEGER
+    -- PRIMARY      define que es una llave primaria de esta tupla
+    -- AUTO_INCREMENT sirve para incrementar el entero automaticamente
+    --                ESTE guarda el siguiente numero del ultimo que se guardo sin importar cuantos se hayan borrado                  anteriormente
+    -- MySQL permite omitir el signo del numero para darle mayor potencia omitiendo el (- , +) con la sentencia 
+    -- UNSIGNED
+
+existen distintos tipos de enteros, como por ejemplo:
+    -- BIGINT
+    -- TINYINT
+    -- INTEGER
+
+TIPOS DE DATOS
+    VARCHAR()       Cadena de caracteres de maxico 255
+    NOT NULL        No permite almacenar datos vacios (nulo es que no hay información)
+                    una cadena vacia es alg por ejemplo ' ' un espacio vacio.
+    DEFAULT         Si no se manda nada MySQL automaticamente va a mandar este valor.   
+                    ejemplo nombre por default podria ser ' Arturo ' todos los que no pongan un nombre pasaran a llamarse Arturos.
+    YEAR            Esta en si es una palabra reservada pero sirve para almacenar años en valores numericos.
+    COMMENT  ' '    Permite agregar un comentario a este row y unicamente quien este mirando la base de datos tiene                   acceso a el.
+    DOUBLE(numero,decimales)          Este almacena los numero y el numero de decimales.
+    FLOAT           Almacena los numeros hasta 6 decimales y es util par operaciones con calculos precisos.
+
+    DROP            Permite borrar cualquier tipo de dato.
+-- TIP ::: MUCHO CUIDADO CUANDO SE USA DROP
+
+    DESCRIBE(NOMBRE DE ALGO DENTRO DE BASE DE DATOS)    nos permite explicarnos como funciona dicho elemento y si es  ACRONIMO      DESC  authors                         una tabla cual es sus contenido hablando de datos, columnas y                                                     demas cosas contenido dentro del elemento a describir.
+
+    SHOW FULL COLUMNS FROM (tabla);
+
+        SHOW FULL COLUMNS FROM books;
+
+-- TIP ::: cuando queremos utilizar una plabra recervada date, year, integer con la tilde (` `) podemos nosotros reservar y decirle a MySQL el nombre de una columna o el nombre de un alias  
+
+    UNIQUE          Significa que es un tipo de llave donde el valor de esta columna tiene que ser unico para esta                    tupla.
+
+DATO de tiempo ' yyyy-mm-dd hh:mm:ss '
+
+    TIMESTAMP       Timestamp esta basado en el numero EPOC que muestra el numero de segundos que han pasado desde el                 1ro de ENERO de 1970 a la fecha actual, valor de 1970 a la fecha
+    DATETIME        Puede ser fechas cualquiera incluso fechas anteriores a nuestra era por ejemplo el año -120
+                    ejemplo los cumpleaños tiene que estar en este tipo de dato.
+
+
+    ENUM()          Este es una enumeración de datos, eso quiere decir que nosotros le vamos a decir cuales son las                   opciones que va a tomar esta columna.
+
+-- TIP :::  Una buena practica de una base de datos es que NINGUNA TUPLA de una base de datos de borra JAMAS, lo que se hace es se pone activa o no activa.
+
+-------------------------------------------------
+CLASE 10 Comando INSERT
+------------------------------------------------
+
+    INSERT          El comando INSERT es INSERT INTO tabla (columnas) values(valores)
+    
+    SELECT * FROM(TABLA)    Esto quiere decir que va a llamar a todos los elementos presentes en una tabla para                               mostrarlos.
+
+-------------------------------------------------
+CLASE 11 Comando ON DUPLICATE KEY
+------------------------------------------------
+
+
+-- TIP ::: Cuando se usa correctamente ON DUPLICATE KEY      FUNCION QUE NUNCA TENEMOS QUE USAR ( IGNORE ALL )
+                ON DUPLICATE KEY  UPDATE           Esto ayuda a encontrar un valor duplicado y actualiza el valor de                                     la misma.
+                
+                ON DUPLICATE KEY UPDATE SET email = '';     Esto quiere decir que si encuentra un registro duplicado                                              va a proseguir a colocar un espacio vacio 
+
+-------------------------------------------------
+CLASE 12 Inserción de datos usando queries anidados
+------------------------------------------------
+
+INSERT INTO ‘books’(title,author_id,gender)
+(‘el libro secreto’, (select author_id from authors
+WHERE name = ‘Octavio Perez’ limit 1)
+,‘m’);
+                                                        Este es un select anidado que nos permite obtener el ID apartir del nombre del autor, hay que tener cuidado ya que puede ser muy peligroso dependiendo como se use. Puede traer información incorrecta y ser muy tardado.
+
+-------------------------------------------------
+CLASE 13 Bash y archivos SQL
+------------------------------------------------
+
+-------------------------------------------------
+CLASE 14 SELECT
+------------------------------------------------
+
+    Este nos ayuda a traer datos puntuales de la base de datos;
+
+    Ejemplo  SELECT
+
+        SELECT name FROM clients;                       Esta consulta trae solo el nombre de los clientes de la base                                                  de datos.
+        SELECT name, gender, email FROM clients;        Esta consulta trae nombre genero e email de la tabla clientes.
+
+        SELECT name, gender, email FROM clients LIMIT 10;       Solo trae los primeros 10 registros de la tabla                                                               clientes
+
+    EJEMPLO WHERE
+
+        SELECT name, gender, email FROM clients WHERE gender = 'M';      Esta consulta trae solo los registros que                                                                     concuerdan con la consulta de genero = a M.
+
+    EJEMPLO DE LIKE
+        LIKE                 Es una función de cercania de textos
+
+        SELECT name, email, YEAR(NOW()) - YEAR(birthdate), gender   
+        FROM clients                                                
+        WHERE gender = 'F'                                          
+        AND `name` LIKE '%Lop%';                                    
+
+    EJEMPLO DE ALIAS        Un alias es el nombre que le podemos asignar a una tabla con la sentencia AS
+            AS  
+
+        SELECT name, email, YEAR(NOW()) - YEAR(birthdate) AS YEARS, gender     Ahora la consulta paso a llamarse years
+        FROM clients                                                
+        WHERE gender = 'F'                                          
+        AND `name` LIKE '%Lop%'; 
+
+-------------------------------------------------
+-- CLASE 15 COMANDO JOIN
+------------------------------------------------
+        JOIN                permite las uniones entre tablas.
+
+        COUNT(*)            Permite realizar un conteo de todos los elementos presentes en la tabla y arroja un                           numero contreto

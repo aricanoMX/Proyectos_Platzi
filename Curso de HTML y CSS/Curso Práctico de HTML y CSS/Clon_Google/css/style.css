@@ -1,0 +1,180 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+header {
+  width: 100%;
+  height: 60px;
+}
+
+header nav {
+  display: flex;
+  justify-content: flex-end;
+}
+
+header nav .nav-right-section {
+  width: 250px;
+  height: auto;
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+}
+nav .nav-right-section a {
+  margin-right: 10px;
+  color: #000000;
+}
+nav .nav-right-section .menu-icon {
+  background-image: url("https://static.thenounproject.com/png/756729-200.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: 25px;
+  height: 25px;
+}
+nav .nav-right-section img {
+  border-radius: 50%;
+  margin-left: 10px;
+}
+/* _________________________________________________ */
+main {
+  margin-top: 150px;
+  text-align: center;
+}
+main .main-logo {
+  width: 530px;
+  margin: 0 auto;
+  margin-bottom: 35px;
+}
+main .main-logo img {
+  height: 100px;
+}
+main .main-input {
+  width: 530px;
+  margin: 0 auto;
+  margin-bottom: 35px;
+}
+main .main-input input {
+  width: 450px;
+  height: 40px;
+  border: none;
+  outline: none;
+}
+main .main-input-container {
+  width: 525px;
+  border-radius: 100px;
+  border: 1px solid #dfe1e5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .main-input-container:hover {
+  box-shadow: 0 1px 6px 0 #20212447;
+  border-color: #dfe1e500;
+}
+
+main .main-input .search-icon {
+  background-image: url("https://cdn0.iconfinder.com/data/icons/material-style/48/search-512.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  height: 18px;
+  width: 18px;
+}
+main .main-input .micro-icon {
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/2/22/Google_microphone_logo.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  height: 18px;
+  width: 18px;
+}
+main .main-button {
+  width: 530px;
+  margin: 0 auto;
+}
+main .main-button div {
+  display: inline-block;
+  margin: 0 10px;
+}
+main .main-button-left button {
+  background-color: rgb(242, 242, 242);
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  padding: 0 16px;
+  height: 36px;
+  color: rgb(95, 99, 103);
+  font-size: 14px;
+}
+main .main-button-left button:hover {
+  color: rgb(34, 34, 34);
+  cursor: pointer;
+  border: 1px solid #c6c6c6;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+main .main-button-right button {
+  background-color: rgb(242, 242, 242);
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  padding: 0 16px;
+  height: 36px;
+  color: rgb(95, 99, 103);
+  font-size: 14px;
+}
+main .main-button-right button:hover {
+  color: rgb(34, 34, 34);
+  cursor: pointer;
+  border: 1px solid #c6c6c6;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+/* _________________________________________________ */
+footer {
+  width: 100%;
+  height: 80px;
+  background-color: rgb(242, 242, 242);
+  position: absolute;
+  bottom: 0;
+  font-size: 15px;
+  align-items: center;
+  color: rgb(95, 99, 103);
+}
+
+footer ul {
+  display: flex;
+}
+footer ul li {
+  list-style: none;
+  text-decoration: none;
+  margin-right: 25px;
+}
+footer ul li:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+footer ul li a {
+  list-style: none;
+  color: rgb(95, 99, 103);
+  text-decoration: none;
+}
+
+nav .nav-top {
+  height: 40px;
+  border-top: 1px solid rgb(228, 228, 228);
+  border-bottom: 1px solid rgb(228, 228, 228);
+}
+
+nav .nav-bottom {
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+}
