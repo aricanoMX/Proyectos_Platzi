@@ -55,7 +55,7 @@ $ **git branch -a ** _Sirve para ver incluso las ramas ocultas _
 
 \$ **git merge (origin/master)** _Esto lo que hace es fusionar el branch que sirve de vigia y nuestra branch local_
 
-\$ **git fetch ** _Sirve para sincronizar los repositorios de nuestro servidor a nuestro repositorio local_
+\$ **git fetch** _Sirve para sincronizar los repositorios de nuestro servidor a nuestro repositorio local_
 
 >     			**IMPORTANTE**
 >     			SIMPRE QUE SE AGREGUEN DATOS A LOS SERVIDORES SE TIENEN QUE SINCRONIZAR CON LOS ARCHIVOS LOCALES
