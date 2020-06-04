@@ -1,4 +1,4 @@
-//ejercicio FIZZ-BUZZ 
+//ejercicio FIZZ-BUZZ
 //Escribe los numero del 1 al 100, pero si el numero es multiplo de 3 escribe Fizz, si es multiplo de 5 escribe, peroooo si el numero es multiplo tanto de 3 cómo de 5 escribe FIZZBUZZ.
 
 // para determinar si se cilos, condiciones, condiciones anidadas, y como extraer el residuo de una división
@@ -30,26 +30,26 @@ var num = 100;
 var divisible = false;
 
 for (var i = 1; i <= num; i++) {
-    divisible = false; // esto es para que en cada iteración la variable no muestr nada y arranque limpia 
-    if (esDivisible(i, 3)) {
-        document.write(" Fizz");
-    }
-    if (esDivisible(i, 5)) {
-        document.write(" Buzz");
-    }
-    if (!esDivisible(i, 3) && !esDivisible(i, 5)) {
-        document.write(i);
-    }
-    document.write("<br />");
+  divisible = false; // esto es para que en cada iteración la variable no muestr nada y arranque limpia
+  if (esDivisible(i, 3)) {
+    document.write(" Fizz");
+  }
+  if (esDivisible(i, 5)) {
+    document.write(" Buzz");
+  }
+  if (!esDivisible(i, 3) && !esDivisible(i, 5)) {
+    document.write(i);
+  }
+  document.write("<br />");
 }
 
-function esDivisible(num, divisor) //Es divisible retorna un verdadero si el nnumero es divisible y falso si no lo es
+function esDivisible(num, divisor) {
+  //Es divisible retorna un verdadero si el nnumero es divisible y falso si no lo es
 
-//algo a tener en cuenta es que cuando una función alcanza un return ya no se ejecuta más
-{
-    if (num % divisor == 0) {
-        return true;
-    } else {
-        return false;
-    }
+  //algo a tener en cuenta es que cuando una función alcanza un return ya no se ejecuta más
+  if (num % divisor == 0) {
+    return true;
+  } else {
+    return false;
+  }
 }

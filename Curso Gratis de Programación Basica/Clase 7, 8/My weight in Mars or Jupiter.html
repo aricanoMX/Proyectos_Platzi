@@ -1,26 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>My weight in mars or jupiter</title>
-</head>
-<body>
+  </head>
+  <body>
     <h1>Tu peso en otro planeta</h1>
     <p>En la tierra pesas distinto que en MARTE o JUPITER</p>
-    
-    <script>
-        var usuario = prompt("Cual es tu peso?") /*Aca preguntamos al usuario cual es su peso mediante un prompt*/
-        var g_tierra = 9.8;
-        var g_marte = 3.7;
-        var g_jupiter = 24.8;
-        var peso = parseInt(usuario); /*Acá estamos igualando y parseando (parseInt) el numero ingresado por el usuario por que de lo contrario seria un texto, despues utilizamos (parseFloat) para hacer que se muestren decimales dentro del resultado*/
-        var peso_final;
 
-        peso_final = peso * g_marte / g_tierra; /* Esto lo que hace es multiplicar tu peso por el peso en marte */
-        peso_final = parseInt(peso_final); /*Aqui lo que hicimos fue quitar los numero restantes con un punto flotante usando parseInt, despues utilizamos parseFloat para que igual se muestren los resultados con decimales*/
-        document.write("Tu peso en marte es: <strong>" + peso_final + " kilos</strong>"); /*Ejemplo perfecto de como podemos utilizar HTML dentro de JS, pero lo tenemos que definir dentro de comillas*/
+    <script>
+      var usuario = prompt(
+        "Cual es tu peso?"
+      ); /*Aca preguntamos al usuario cual es su peso mediante un prompt*/
+      var g_tierra = 9.8;
+      var g_marte = 3.7;
+      var g_jupiter = 24.8;
+      var peso = parseInt(
+        usuario
+      ); /*Acá estamos igualando y parseando (parseInt) el numero ingresado por el usuario por que de lo contrario seria un texto, despues utilizamos (parseFloat) para hacer que se muestren decimales dentro del resultado*/
+      var peso_final;
+
+      peso_final =
+        (peso * g_marte) /
+        g_tierra; /* Esto lo que hace es multiplicar tu peso por el peso en marte */
+      peso_final = parseInt(
+        peso_final
+      ); /*Aqui lo que hicimos fue quitar los numero restantes con un punto flotante usando parseInt, despues utilizamos parseFloat para que igual se muestren los resultados con decimales*/
+      document.write(
+        "Tu peso en marte es: <strong>" + peso_final + " kilos</strong>"
+      ); /*Ejemplo perfecto de como podemos utilizar HTML dentro de JS, pero lo tenemos que definir dentro de comillas*/
     </script>
-</body>
+  </body>
 </html>

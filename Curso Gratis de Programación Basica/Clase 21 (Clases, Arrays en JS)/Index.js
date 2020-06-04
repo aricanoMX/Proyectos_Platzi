@@ -7,7 +7,6 @@ images["Tocinauro"] = "Images/cerdo.png";
 // var pokachu = new Pakiman("Pokachu", "Viento", 1000, 500);
 // var tocinauro = new Pakiman("Tocinauro", "Tierra", 1500, 250);
 
-
 //los arrays normalmente funcionana indexados a 0, 1, , 3, 4 y dependientdo el mumero al que lleguemos es el numero de cajitas que va a contener el array
 
 //Tambien a los arrays se les puede empujar un nuevo dato, con la funcion push() agregando el valor en el ultimo espacio desponible
@@ -41,12 +40,10 @@ console.log(pakidex);
 //la variable IN muestra el indice de los objetos
 //{
 //    console.log(pakidex[pakimons]);
-//}  
+//}
 
-for (var pakimons of pakidex) //para cada objeto dentro de una arreglo o diccionario
-
-//La variable of muestra directamente la instancia en lugar de l indice de los objetos 
-{
-    console.log(pakimons);
-    pakimons.mostrar();
+//La variable of muestra directamente la instancia en lugar de l indice de los objetos
+for (var pakimons of pakidex) { //para cada objeto dentro de una arreglo o diccionario
+  console.log(pakimons);
+  pakimons.mostrar();
 }
