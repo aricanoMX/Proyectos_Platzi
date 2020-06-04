@@ -14,8 +14,4 @@ No son códigos muy complejos pero :wink:
 #### Instrucciones:
 
 - Abajo te dejo link de las carpetas contenidas dentro del repositorio.
-<<<<<<< HEAD
 - Únicamente haz clic en el link que dejo abajo
-=======
-- Únicamente haz clic en el link que dejo abajo.
->>>>>>> 65ca7ba19c61cd107707272826de7fd64ea35896
