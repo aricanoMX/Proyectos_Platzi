@@ -362,7 +362,7 @@ $ git remote set-url origin url-ssh-del-repositorio-en-github
 									$ git push origin master
 
 -------------------------------------------------------------------------
---------------------------------------------------------------------------
+-------------------------------------------------------------------------
 Alias
 
 comenzamos haciendo uso de cualquier comando dentro de git, posteriormente pasamos a definir algun tipo de alias 
