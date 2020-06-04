@@ -316,7 +316,11 @@ Configura tus llaves SSH en local
 
 Primer paso: Generar tus llaves SSH. Recuerda que es muy buena idea proteger tu llave privada con una contraseña.
 
+<<<<<<< HEAD
 									ssh-keygen -t rsa -b 4096 -C "tekne295@gmail.com"
+=======
+									ssh-keygen -t rsa -b 4096 -C "tu@email.com"
+>>>>>>> a4f02003b7fc88d25c49ea428efc79ac8e40f108
 
 									-t			tipo de algoritmo
 									rsa 
@@ -333,8 +337,12 @@ Segundo paso: Terminar de configurar nuestro sistema.
 									eval $(ssh-agent -s)
 
 # Añadir tu llave SSH a este "servidor":
+<<<<<<< HEAD
 									ssh-add ruta-donde-guardaste-tu-llave-privada		
 									ssh-add ~/.ssh/id_rsa	
+=======
+									ssh-add ruta-donde-guardaste-tu-llave-privada			
+>>>>>>> a4f02003b7fc88d25c49ea428efc79ac8e40f108
 
 
 
@@ -361,8 +369,13 @@ $ git remote set-url origin url-ssh-del-repositorio-en-github
 
 									$ git push origin master
 
+<<<<<<< HEAD
 -------------------------------------------------------------------------
 -------------------------------------------------------------------------
+=======
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+>>>>>>> a4f02003b7fc88d25c49ea428efc79ac8e40f108
 Alias
 
 comenzamos haciendo uso de cualquier comando dentro de git, posteriormente pasamos a definir algun tipo de alias 
