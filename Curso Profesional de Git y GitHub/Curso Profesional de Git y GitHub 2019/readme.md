@@ -177,7 +177,7 @@ $ **git --global**                  Quiere decir que vamos a cambiar todos los u
 
 **Primer paso:** Generar tus llaves SSH. Recuerda que es muy buena idea proteger tu llave privada con una contraseña.
 
-    								ssh-keygen -t rsa -b 4096 -C "tekne295@gmail.com"
+    								ssh-keygen -t rsa -b 4096 -C "correo@mail.com"
 
     								-t			tipo de algoritmo
     								rsa
