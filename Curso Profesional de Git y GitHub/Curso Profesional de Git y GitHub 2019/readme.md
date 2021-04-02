@@ -197,6 +197,12 @@ $ **git --global**                  Quiere decir que vamos a cambiar todos los u
 
     								ssh-add ruta-donde-guardaste-tu-llave-privada
     								ssh-add ~/.ssh/id_rsa
+								
+								sh-copy-id correo@gmail.com
+								
+								cd ~/.ssh
+								
+								cat id_rsa.pub
 
 Cambiar la ulr en en caso de que primero se haya realizado con https a SSH y viceversa
 
